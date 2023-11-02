@@ -7,6 +7,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.1.0-beta
+- Add page templates: Page title with no sidebar and Page title with section nav
+- Update parent script enqueueing
+- Add search form that uses site-limited search.ufl.edu rather than programmable Google Search (eases implementing site search for end users)
+
 1.0.0-beta
 - Enqueue dependencies, parent theme and child theme styles
 - Enqueue example child scripts
