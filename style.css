@@ -10,6 +10,7 @@ Text Domain: ufl
 Tags: featured-images, threaded-comments, translation-ready
 */
 
-.page-template-default .site-main {
-/*	padding:50px;*/
+
+.page-template-page-section-nav .section-navigation {
+	top:120px;
 }
