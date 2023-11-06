@@ -10,13 +10,12 @@
 
 get_header();
 
-$ufl_nav_menu_show = get_post_meta($post->ID, 'ufl_nav_menu_show', true);
+$section_nav = do_blocks( '<!-- wp:create-block/section-nav /-->' );
+$disable_breadcrumbs = get_field('disable_breadcrumbs');
 
-if ($ufl_nav_menu_show === "0" || $ufl_nav_menu_show === "") {
+if (!$disable_breadcrumbs) {
   the_breadcrumb($post, true);
 }
-
-$section_nav = do_blocks( '<!-- wp:create-block/section-nav /-->' );
 
 ?>
 <div id="content" class="site-content mt-5">

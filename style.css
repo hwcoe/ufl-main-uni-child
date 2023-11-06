@@ -10,7 +10,44 @@ Text Domain: ufl
 Tags: featured-images, threaded-comments, translation-ready
 */
 
+.header, 
+.section-navigation .section-navigation-inner {
+	z-index: 9999;
+}
+/* primary nav */
+.header #main-nav-ul .nav-link {
+  text-transform:uppercase;
+  margin-top:8px;
+  margin-bottom:0;
+  padding-bottom:0;
+  border-bottom:#fa471600 2px solid;
+ }
+ .header #main-nav-ul li:hover .nav-link,
+ .header #main-nav-ul li:focus .nav-link,
+ .header #main-nav-ul li:focus-within .nav-link {
+  border-bottom:#fa4616 2px solid
+ }
+ .dropdown-item {
+ 	white-space:normal;
+ 	display:inline-block;
+ }
+  .header #main-nav-ul .dropdown-menu li {
+  	line-height:30px;
+  }
 
+ /* content */
+.entry-header h1 {
+	font-size:48px;
+  	line-height:54px
+}
+@media (min-width:800px) {
+.entry-header h1 {
+  font-size:62px;
+  line-height:68px
+ }
+}
 .page-template-page-section-nav .section-navigation {
 	top:120px;
 }
+
+

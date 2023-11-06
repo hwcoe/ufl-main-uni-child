@@ -10,9 +10,9 @@
 
 get_header();
 
-$ufl_nav_menu_show = get_post_meta($post->ID, 'ufl_nav_menu_show', true);
+$disable_breadcrumbs = get_field('disable_breadcrumbs');
 
-if ($ufl_nav_menu_show === "0" || $ufl_nav_menu_show === "") {
+if (!$disable_breadcrumbs) {
   the_breadcrumb($post, true);
 }
 
