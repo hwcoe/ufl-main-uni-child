@@ -31,6 +31,10 @@ Tags: featured-images, threaded-comments, translation-ready
  	white-space:normal;
  	display:inline-block;
  }
+.dropdown-item.active,
+.dropdown-item:active {
+	background-color: #0021A5;
+}
   .header #main-nav-ul .dropdown-menu li {
   	line-height:30px;
   }
@@ -38,7 +42,7 @@ Tags: featured-images, threaded-comments, translation-ready
  /* content */
 .entry-header h1 {
 	font-size:48px;
-  	line-height:54px
+  	line-height:54px;
 }
 @media (min-width:800px) {
 .entry-header h1 {
@@ -50,4 +54,20 @@ Tags: featured-images, threaded-comments, translation-ready
 	top:120px;
 }
 
-
+/* gravity forms */
+#content ul.gform_fields {
+	padding-left:0;
+}
+/*input[type="submit"]., input.button {*/
+.gform_button {
+	border: 1px solid #0021a5;
+	cursor: pointer;
+	font-size: 26px;
+	padding: 15px 40px;
+	background-color: transparent;
+	color: #343741;
+}
+.gform_button:hover, .gform_button:focus {
+	background-color: #343741;	
+	color: #fff;		
+}
