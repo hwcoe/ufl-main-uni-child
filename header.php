@@ -21,9 +21,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-blue_1.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-blue_1.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-blue_1.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png">
   <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=647a2dd340353a0019caf1f9&product=inline-share-buttons&source=platform" async="async"></script>
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
@@ -77,7 +77,8 @@
             <?php if ( get_theme_mod( 'display_header_content', false ) && !$second_featured_image )  {
                 $alternate_logo = get_theme_mod( 'alternate_logo' );
                 $alternate_logo_text = get_theme_mod( 'alternate_logo_text' );
-                $alternate_logo_url = wp_get_attachment_image_url( $alternate_logo, 'full' ); ?>
+                $alternate_logo_url = wp_get_attachment_image_url( $alternate_logo ) ? wp_get_attachment_image_url( $alternate_logo, 'full' ) : get_stylesheet_directory_uri() . '/img/UF_Monogram_Orange.png';
+                ?>
               <!-- Display content when the checkbox is checked -->
               <a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
               <span class="alt-logo">
