@@ -38,6 +38,10 @@ Tags: featured-images, threaded-comments, translation-ready
   .header #main-nav-ul .dropdown-menu li {
   	line-height:30px;
   }
+/* other nav */
+.page-template-page-section-nav .section-navigation {
+	top:120px;
+}
 
  /* content */
 .entry-header h1 {
@@ -50,8 +54,15 @@ Tags: featured-images, threaded-comments, translation-ready
   line-height:68px
  }
 }
-.page-template-page-section-nav .section-navigation {
-	top:120px;
+.site-content a {
+	font-family: "gentonamedium";
+	color: #0021a5;
+	text-decoration: none;
+}
+.site-content a:hover,
+.site-content a:focus {
+	text-decoration: underline;
+	color: #000;
 }
 
 /* gravity forms */

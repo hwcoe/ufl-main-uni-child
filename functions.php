@@ -31,8 +31,8 @@ function ufl_uni_child_enqueue_scripts() {
 	// parent scripts 
 	wp_enqueue_script('custom-js', get_parent_theme_file_uri() . '/js/custom.js', false, '', true);
 	// wp_enqueue_script('lightbox-js', get_parent_theme_file_uri() . '/js/lightbox.js', false, '', true);
-    wp_enqueue_script('directional-hover-js', get_parent_theme_file_uri() . '/js/jquery.directional-hover.min.js', false, '', true);
-    wp_register_script( 'misha_scripts', get_parent_theme_file_uri() . '/js/ajax-script.js', array('jquery') );
+	wp_enqueue_script('directional-hover-js', get_parent_theme_file_uri() . '/js/jquery.directional-hover.min.js', false, '', true);
+	wp_register_script( 'misha_scripts', get_parent_theme_file_uri() . '/js/ajax-script.js', array('jquery') );
 	
 	// child scripts
 	  // custom.js
@@ -59,8 +59,23 @@ if ( !function_exists( 'hwcoe_child_icon_url' ) ) {
  */
 define( "HWCOE_CHILD_INC_DIR", get_stylesheet_directory() . "/inc" );
 
-// Integrating Advanced Custom Fields
+/**
+ * Load custom theme files 
+ */
+require HWCOE_CHILD_INC_DIR . '/template-tags.php';
+require HWCOE_CHILD_INC_DIR . '/customizer.php';
 
+// delete footer nav menu location since the menu is not displayed by the theme
+if (!function_exists( 'hwcoe_unregister_footer_menu' )) {
+	function hwcoe_unregister_footer_menu() {
+		unregister_nav_menu( 'footer-menu' );
+	}
+}
+add_action('init', 'hwcoe_unregister_footer_menu');
+
+/*
+* Integrating Advanced Custom Fields
+*/
 if (!function_exists('hwcoe_acf_json_save_point')) { 
 	add_filter('acf/settings/save_json', 'hwcoe_acf_json_save_point');
 
