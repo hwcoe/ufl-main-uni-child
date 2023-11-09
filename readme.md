@@ -10,6 +10,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 1.1.0-beta
 - Add page templates: Page title with no sidebar and Page title with section nav
 - Update parent script enqueueing
+- Only display info and resources menus if locations have menus assigned
+- Change hard coded labels for info and resources menu to display the menu name
 - Add search form that uses site-limited search.ufl.edu rather than programmable Google Search (eases implementing site search for end users)
 
 1.0.0-beta
