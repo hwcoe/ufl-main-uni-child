@@ -15,6 +15,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Only display info and resources menus if locations have menus assigned
 - Change hard coded labels for info and resources menu to display the menu name
 - Remove Customizer and Menu controls that don't actually cause anything to display
+- Add ability to set unit specific social and other media URLs for FB, X, YT, LI, IG, Flickr, RSS feed 
 - Add search form that uses site-limited search.ufl.edu rather than programmable Google Search (eases implementing site-limited search for end users)
 
 1.0.0-beta

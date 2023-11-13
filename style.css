@@ -43,7 +43,17 @@ Tags: featured-images, threaded-comments, translation-ready
 	top:120px;
 }
 
- /* content */
+/* footer */
+.ufl-linkedin,
+.ufl-flickr,
+.ufl-feed {
+	max-width: 25px;
+}
+.footer-col-social {
+	flex-wrap: wrap; 
+}
+
+/* content */
 .entry-header h1 {
 	font-size:48px;
   	line-height:54px;
