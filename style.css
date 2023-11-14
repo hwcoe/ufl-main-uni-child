@@ -64,13 +64,13 @@ Tags: featured-images, threaded-comments, translation-ready
   line-height:68px
  }
 }
-.site-content a {
+.site-content a:not(.button) {
 	font-family: "gentonamedium";
 	color: #0021a5;
 	text-decoration: none;
 }
-.site-content a:hover,
-.site-content a:focus {
+.site-content a:hover:not(.button),
+.site-content a:focus:not(.button) {
 	text-decoration: underline;
 	color: #000;
 }

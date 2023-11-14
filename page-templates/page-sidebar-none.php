@@ -11,33 +11,24 @@
 get_header();
 
 $disable_breadcrumbs = get_field('disable_breadcrumbs');
+$members_only = get_field('members_only');
 
 if (!$disable_breadcrumbs) {
-  the_breadcrumb($post, true);
+	the_breadcrumb($post, true);
 }
 
+parse_blocks( $post->post_content );
 ?>
 <div id="content" class="site-content container py-5">
-  <div id="primary" class="content-area">
+	<div id="primary" class="content-area">
+		<?php if (!$members_only || ufl_check_authorized_user( get_the_ID() ) ) :
+			get_template_part( 'template-parts/content', 'classic' );
+		else:
+			get_template_part('template-parts/content','restricted');
+		endif;
+		?>
 
-    <!-- Hook to add something nice -->
-    <?php bs_after_primary(); ?>
-    <?php parse_blocks( $post->post_content ); ?>
-
-      <main id="main" class="site-main">
-
-        <header class="entry-header">
-          <?php the_post(); ?>
-          <h1><?php the_title(); ?></h1>
-        </header>
-
-        <div class="entry-content">
-          <?php the_content(); ?>
-        </div>
-
-      </main>
-
-  </div>
+	</div>
 </div>
 
 <?php

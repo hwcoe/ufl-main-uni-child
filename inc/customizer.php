@@ -8,8 +8,8 @@ function hwcoe_customizer_controls ( $wp_customize ) {
 
 	// Social 
 	$wp_customize->add_section( 'social_urls', array(
-		'title' => __('Social Media', 'hwcoe-ufl'),
-		'description' => __("Enter your organization's social media URLs (e.g. https://www.instagram.com/ufwertheim/). Social media icons are displayed in the site footer", 'hwcoe-ufl'),
+		'title' => __('Social Media', 'ufl_stamatschild'),
+		'description' => __("Enter your organization's social media URLs (e.g. https://www.instagram.com/ufwertheim/). Social media icons are displayed in the site footer", 'ufl_stamatschild'),
 		'priority' => 40,
 	));
 	
@@ -22,44 +22,44 @@ function hwcoe_customizer_controls ( $wp_customize ) {
 	$wp_customize->add_setting( 'feed_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
 	
 	$wp_customize->add_control( 'facebook_url', array(
-		'label' => __('Facebook URL', 'hwcoe-ufl'),
-		'description' => __("", 'hwcoe-ufl'),
+		'label' => __('Facebook URL', 'ufl_stamatschild'),
+		'description' => __("", 'ufl_stamatschild'),
 		'section' => 'social_urls',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'twitter_url', array(
-		'label' => __('X (formerly Twitter) URL', 'hwcoe-ufl'),
-		'description' => __("", 'hwcoe-ufl'),
+		'label' => __('X (formerly Twitter) URL', 'ufl_stamatschild'),
+		'description' => __("", 'ufl_stamatschild'),
 		'section' => 'social_urls',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'youtube_url', array(
-		'label' => __('YouTube URL', 'hwcoe-ufl'),
-		'description' => __("", 'hwcoe-ufl'),
+		'label' => __('YouTube URL', 'ufl_stamatschild'),
+		'description' => __("", 'ufl_stamatschild'),
 		'section' => 'social_urls',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'linkedin_url', array(
-		'label' => __('LinkedIn URL', 'hwcoe-ufl'),
-		'description' => __("", 'hwcoe-ufl'),
+		'label' => __('LinkedIn URL', 'ufl_stamatschild'),
+		'description' => __("", 'ufl_stamatschild'),
 		'section' => 'social_urls',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'instagram_url', array(
-		'label' => __('Instagram URL', 'hwcoe-ufl'),
-		'description' => __("", 'hwcoe-ufl'),
+		'label' => __('Instagram URL', 'ufl_stamatschild'),
+		'description' => __("", 'ufl_stamatschild'),
 		'section' => 'social_urls',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'flickr_url', array(
-		'label' => __('Flickr URL', 'hwcoe-ufl'),
-		'description' => __("", 'hwcoe-ufl'),
+		'label' => __('Flickr URL', 'ufl_stamatschild'),
+		'description' => __("", 'ufl_stamatschild'),
 		'section' => 'social_urls',
 		'type' => 'text',
 	));
 	$wp_customize->add_control( 'feed_url', array(
-		'label' => __('News Feed URL', 'hwcoe-ufl'),
-		'description' => __("", 'hwcoe-ufl'),
+		'label' => __('News Feed URL', 'ufl_stamatschild'),
+		'description' => __("", 'ufl_stamatschild'),
 		'section' => 'social_urls',
 		'type' => 'text',
 	));

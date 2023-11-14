@@ -1,11 +1,11 @@
 <form action="https://search.ufl.edu/search" method="get" class="search-form" role="search" aria-label="Search Form">
-  <label for="query_content" class="visuallyhidden sr-only"><?php esc_html_e('Search', 'hwcoe-ufl'); ?></label>
-  <input type="text" id="query_content" name="query" placeholder="<?php esc_attr_e('Search', 'hwcoe-ufl'); ?>" />
+  <label for="query_content" class="visuallyhidden sr-only"><?php esc_html_e('Search', 'ufl_stamatschild'); ?></label>
+  <input type="text" id="query_content" name="query" placeholder="<?php esc_attr_e('Search', 'ufl_stamatschild'); ?>" />
 
   <label for="submit_content" class="visuallyhidden">Submit</label>
      
   <button type="submit" id="submit_content" class="btn-search">
-    <span class="sr-only"><?php esc_html_e('Search', 'hwcoe-ufl'); ?></span>
+    <span class="sr-only"><?php esc_html_e('Search', 'ufl_stamatschild'); ?></span>
     <span class="icon-svg">
       <svg>
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/spritemap.svg#search"></use>

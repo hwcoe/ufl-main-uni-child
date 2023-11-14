@@ -8,6 +8,11 @@
  * @package UFL Main
  */
 
+add_action( 'after_setup_theme', 'ufl_uni_child_theme_setup' );
+function ufl_uni_child_theme_setup() {
+	load_child_theme_textdomain( 'ufl_stamatschild', get_stylesheet_directory() . '/languages' );
+}
+
 add_action( 'wp_enqueue_scripts', 'ufl_uni_child_enqueue_styles' );
 function ufl_uni_child_enqueue_styles() {
 	// parent styles
@@ -62,8 +67,9 @@ define( "HWCOE_CHILD_INC_DIR", get_stylesheet_directory() . "/inc" );
 /**
  * Load custom theme files 
  */
-require HWCOE_CHILD_INC_DIR . '/template-tags.php';
 require HWCOE_CHILD_INC_DIR . '/customizer.php';
+require HWCOE_CHILD_INC_DIR . '/shibboleth.php';
+require HWCOE_CHILD_INC_DIR . '/template-tags.php';
 
 // delete footer nav menu location since the menu is not displayed by the theme
 if (!function_exists( 'hwcoe_unregister_footer_menu' )) {
