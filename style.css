@@ -54,6 +54,16 @@ Tags: featured-images, threaded-comments, translation-ready
 }
 
 /* content */
+.featured-full-width-img {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.featured-full-width-img h1 {
+	padding: 10px 15px;
+	background-color: #000;
+	color:#fff;
+}
 .entry-header h1 {
 	font-size:48px;
   	line-height:54px;

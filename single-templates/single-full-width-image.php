@@ -8,7 +8,7 @@ get_header();
 
 ?>
 
-<main id="main" class="site-main">
+<main id="main" class="site-main site-content">
 	<?php the_post(); ?>
 	<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
 	<header class="entry-header featured-full-width-img height-75 bg-dark text-light mb-3" style="background-image: url('<?php echo $thumb['0']; ?>')">
@@ -26,9 +26,7 @@ get_header();
 			<p class="entry-meta">
 				<small class="text-muted">
 					<?php
-						bootscore_date();
-						bootscore_author();
-						bootscore_comment_count();
+						the_time('F j, Y');
 					?>
 				</small>
 			</p>
