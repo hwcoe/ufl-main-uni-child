@@ -20,7 +20,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Add child theme textdomain (TODO: generate language localization files)
 - Add comments template to default post template
 - Update full width image post template
-- Add search form that uses site-limited search.ufl.edu rather than programmable Google Search (eases implementing site-limited search for end users)
+- Add smooth scrolling for in-page anchors
+- Edit search form to use site-limited search.ufl.edu rather than programmable Google Search (eases implementing site-limited search for end users)
 
 1.0.0-beta
 - Enqueue dependencies, parent theme and child theme styles

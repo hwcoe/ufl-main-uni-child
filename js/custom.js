@@ -52,4 +52,21 @@ if ( hash == '' || hash == '#' || hash == undefined ) return false;
 
 // END smooth scrolling
 
+// Search Modal
+function displaySearchModalChild(){
+    const searchModal = document.getElementById('search-modal');
+    searchModal.style.display = 'block';
+    // const searchInput = document.getElementById('gsc-i-id1');
+    const searchInput = document.getElementById('query_content');
+    searchInput.placeholder = 'How can we help you?';
+    // searchInput.placeholder = 'test placeholder';
+    searchInput.style.background = 'none';
+    // document.getElementsByClassName('gsc-search-button-v2')[0].innerHTML = 'search-modal-icon.png';
+    // document.getElementsByClassName('search-submit')[0].innerHTML = 'search-modal-icon.png';
+    document.getElementById('query_content').focus();
+    document.body.classList.add('search-open');
+  }
+
+// END Search Modal
+
 

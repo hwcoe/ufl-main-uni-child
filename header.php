@@ -60,10 +60,10 @@
 
 
   <div id="search-modal" class="search-modal">
-	<script src="https://www.google.com/jsapi"></script>
-	<script src="https://cse.google.com/cse.js?cx=014080162503224819692:afbeo7xiquu"></script>
+	<!-- <script src="https://www.google.com/jsapi"></script>
+	<script src="https://cse.google.com/cse.js?cx=014080162503224819692:afbeo7xiquu"></script> -->
 	<div class="gcse-search" enableOrderBy="true"></div>
-	<!-- <?php get_search_form(); ?> -->
+	<?php get_search_form(); ?>
 	<button id="close-search-button" class="close-search" onclick="hideSearchModal();"><img class="search-icon" alt="close search" src="/wp-content/themes/ufl-main-uni/img/x.PNG"></button>
   </div>
   <header id="masthead" class="header header-wrapper fixed-header w-100">
@@ -112,7 +112,7 @@
 			<!-- START MOBILE ONLY SEARCH AND TOGGLE-->
 			<div class="mobile-nav">
 				<div class="mobile-search mobile-only-search">
-				  <button id="search-button" class="search-button" onclick="displaySearchModal();">
+					<button id="search-button" class="search-button" onclick="displaySearchModalChild();">
 					<img class="search-icon" alt="search" src="/wp-content/themes/ufl-main-uni/img/search_icon.png">
 				  </button>
 				</div>
@@ -142,7 +142,7 @@
 				
 				<div class="audience-nav-links d-flex justify-content-end">
 					<div class="desk-only-search">
-						<button id="search-button" class="search-button" onclick="displaySearchModal();">
+						<button id="search-button" class="search-button" onclick="displaySearchModalChild();">
 							<img class="search-icon" alt="search" src="/wp-content/themes/ufl-main-uni/img/search_icon.png">
 						</button>
 					</div>
