@@ -9,7 +9,9 @@ License URI: https://ufl.edu
 Text Domain: ufl
 Tags: featured-images, threaded-comments, translation-ready
 */
-
+:root{
+/*	--color-variable: #FA4616;*/
+}
 .header, 
 .section-navigation .section-navigation-inner {
 	z-index: 9999;
@@ -25,7 +27,7 @@ Tags: featured-images, threaded-comments, translation-ready
  .header #main-nav-ul li:hover .nav-link,
  .header #main-nav-ul li:focus .nav-link,
  .header #main-nav-ul li:focus-within .nav-link {
-  border-bottom:#fa4616 2px solid
+  border-bottom:2px solid var(--core-orange)
  }
  .dropdown-item {
  	white-space:normal;
@@ -33,7 +35,7 @@ Tags: featured-images, threaded-comments, translation-ready
  }
 .dropdown-item.active,
 .dropdown-item:active {
-	background-color: #0021A5;
+	background-color: var(--core-blue);
 }
   .header #main-nav-ul .dropdown-menu li {
   	line-height:30px;
@@ -55,7 +57,7 @@ Tags: featured-images, threaded-comments, translation-ready
 	font-family: 'gentonamedium', Arial, sans-serif;
 	font-size:1.65em;
 	line-height:1em;
-	color: #0021A5;
+	color: var(--core-blue);
 	font-weight: 400;
 	padding: 0.5em;
 	border: medium none;
@@ -115,13 +117,24 @@ Tags: featured-images, threaded-comments, translation-ready
 }
 .site-content a:not(.button) {
 	font-family: "gentonamedium";
-	color: #0021a5;
-	text-decoration: none;
+	transition: color 0.3s ease,
+	background 0.3s ease;
+	text-decoration:none;
 }
 .site-content a:hover:not(.button),
 .site-content a:focus:not(.button) {
-	text-decoration: underline;
-	color: #000;
+	text-decoration:underline
+}
+a, .page-link {
+	color:var(--core-blue);
+}
+a:hover, a:focus {
+	color:var(--black);
+}
+.page-link:hover, .page-link:focus {
+	color:var(--black);
+	background-color: var(--warm-grey-1);
+	border-color: var(--warm-grey-1);
 }
 /* category block styling */
 .wp-block-post-terms {
@@ -136,12 +149,12 @@ Tags: featured-images, threaded-comments, translation-ready
 }
 /*input[type="submit"]., input.button {*/
 .gform_button {
-	border: 1px solid #0021a5;
+	border: 1px solid var(--core-blue);
 	cursor: pointer;
 	font-size: 26px;
 	padding: 15px 40px;
 	background-color: transparent;
-	color: #343741;
+	color: var(--cool-gray-11);
 }
 .gform_button:hover, .gform_button:focus {
 	background-color: #343741;	

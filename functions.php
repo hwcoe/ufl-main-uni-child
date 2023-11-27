@@ -77,6 +77,7 @@ define( "HWCOE_CHILD_INC_DIR", get_stylesheet_directory() . "/inc" );
  * Load custom theme files 
  */
 require HWCOE_CHILD_INC_DIR . '/customizer.php';
+require HWCOE_CHILD_INC_DIR . '/events-manager.php';
 require HWCOE_CHILD_INC_DIR . '/shibboleth.php';
 require HWCOE_CHILD_INC_DIR . '/template-tags.php';
 
@@ -135,3 +136,4 @@ add_action('save_post', 'remove_ufl_save_menu_metaBox', 9);
 function remove_ufl_save_menu_metaBox() {
 	remove_action('save_post', 'ufl_save_menu_metaBox');
 }
+
