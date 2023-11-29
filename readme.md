@@ -22,6 +22,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Update full width image post template
 - Add smooth scrolling for in-page anchors
 - Edit search form to use site-limited search.ufl.edu rather than programmable Google Search (eases implementing site-limited search for end users)
+- Add Events Manager event template and custom functions and templates
 
 1.0.0-beta
 - Enqueue dependencies, parent theme and child theme styles

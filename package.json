@@ -1,0 +1,21 @@
+{
+  "name": "ufl-main-uni-child",
+  "version": "1.1.0",
+  "description": "Child theme for UFL Mercury",
+  "main": "index.php",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwcoe/ufl-main-uni-child.git"
+  },
+  "author": "sezj",
+  "license": "ISC",
+  "devDependencies": {
+    "@lodder/grunt-postcss": "^3.1.1",
+    "autoprefixer": "^10.4.16",
+    "grunt": "^1.6.1",
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}

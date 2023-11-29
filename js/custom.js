@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 // Smooth scrolling
 jQuery(function($) {
 	// Performs a smooth page scroll to an anchor on the same page.
@@ -40,7 +40,7 @@ jQuery(function($) {
 
 // different-page links
 jQuery ( document ).ready ( function($) {
-var hash= window.location.hash
+var hash= window.location.hash;
 if ( hash == '' || hash == '#' || hash == undefined ) return false;
 	var target = $(hash);
 	target = target.length ? target : $('[name=' + hash.slice(1) +']');
