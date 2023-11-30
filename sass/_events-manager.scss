@@ -12,30 +12,23 @@
 		clear: both;
 		display: inline-block;
 		&.description {
-			font-weight: 100;
-			font-size: 14px;
 			padding-top: 6px;
+			font-weight:400;
 		}
 	}
 	select, textarea, input[type="text"], input[type="password"], input[type="email"] {
 		padding: 5px 4px;	
-		color: rgba(51, 49, 50, 0.8);
-		border: 2px solid rgba(76, 135, 181, 0.7);
-	}
-	input[type="submit"], input.button {
-		border: 3px solid var(--core-orange);
-		cursor: pointer;
-		padding: 15px 20px;
-		text-transform: uppercase;	
-		background-color: transparent;
-		color: var(--core-orange);
-		&:hover, &:focus {
-			color: var(--white);
-			background-color: var(--core-orange);
-		}
+		// color: rgba(51, 49, 50, 0.8);
+		// border: 2px solid rgba(76, 135, 181, 0.7);
+		width:100%;
+		display: inline-block;
 	}
 	.required {
 		color: var(--bottlebrush);
 		margin-left: 4px;
 	}
+}
+
+.ui-em_timepicker-wrapper {
+	width: 8em;
 }

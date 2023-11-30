@@ -143,11 +143,11 @@ a:hover, a:focus {
 	line-height: 28px;
 }
 
-/* gravity forms */
+/* forms */
 #content ul.gform_fields {
 	padding-left:0;
 }
-/*input[type="submit"]., input.button {*/
+input[type="submit"], input.button, 
 .gform_button {
 	border: 1px solid var(--core-blue);
 	cursor: pointer;
@@ -155,8 +155,8 @@ a:hover, a:focus {
 	padding: 15px 40px;
 	background-color: transparent;
 	color: var(--cool-gray-11);
-}
-.gform_button:hover, .gform_button:focus {
-	background-color: #343741;	
-	color: #fff;		
+	&:hover, &:focus {
+		background-color: #343741;	
+		color: #fff;		
+	}
 }
