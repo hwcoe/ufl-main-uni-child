@@ -92,7 +92,7 @@
 						
 	
 						<!-- Grid column -->
-						<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col">
+						<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col footer-1">
 						<div class="footer_widget mb-4">
 							<?php if (is_active_sidebar('footer-1')) : ?>
 								<?php dynamic_sidebar('footer-1'); ?>
@@ -104,7 +104,7 @@
 						
 	
 						<!-- Grid column -->
-						<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col">
+						<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col footer-2">
 						<div class="footer_widget mb-4">
 						<?php if (is_active_sidebar('footer-2')) : ?>
 								<?php dynamic_sidebar('footer-2'); ?>
@@ -115,7 +115,7 @@
 						
 	
 						<!-- Grid column -->
-						<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col">
+						<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col footer-3">
 						<div class="footer_widget mb-4">
 						<?php if (is_active_sidebar('footer-3')) : ?>
 								<?php dynamic_sidebar('footer-3'); ?>
@@ -125,7 +125,7 @@
 							<!-- END Grid column -->
 
 							<!-- Grid column -->
-							<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col">
+							<div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 mx-auto my-4 footer-col footer-4">
 							<div class="footer_widget mb-4">
 							<?php if (is_active_sidebar('footer-4')) : ?>
 								<?php dynamic_sidebar('footer-4'); ?>
