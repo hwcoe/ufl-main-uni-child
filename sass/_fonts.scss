@@ -1,0 +1,22 @@
+/* ---------------------------
+UF Branding Fonts
+----------------------------*/
+
+@font-face {
+  font-family: "Billion Dreams";
+  src: url("https://www.eng.ufl.edu/fonts/BillionDreams.eot");
+  src: url("https://www.eng.ufl.edu/fonts/BillionDreams.eot?#iefix") format("embedded-opentype"), 
+     url("https://www.eng.ufl.edu/fonts/BillionDreams.woff") format("woff"), 
+     url("https://www.eng.ufl.edu/fonts/BillionDreams.ttf") format("truetype"), 
+     url("https://www.eng.ufl.edu/fonts/BillionDreams.svg#BillionDreams") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.display {
+  font-family: "Billion Dreams";
+  text-transform: unset;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  font-weight:400;
+}

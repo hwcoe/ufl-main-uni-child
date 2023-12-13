@@ -9,79 +9,13 @@ License URI: 	https://ufl.edu
 Text Domain: 	ufl_stamatschild
 */
 
-:root{
-/*	--color-variable: #FA4616;*/
-}
+// :root{
+// 	--color-variable: #FA4616;
+// }
+
 .header, 
 .section-navigation .section-navigation-inner {
 	z-index: 9999;
-}
-/* primary nav */
-.header #main-nav-ul .nav-link {
-  text-transform:uppercase;
-  margin-top:8px;
-  margin-bottom:0;
-  padding-bottom:0;
-  border-bottom:#fa471600 2px solid;
- }
- .header #main-nav-ul li:hover .nav-link,
- .header #main-nav-ul li:focus .nav-link,
- .header #main-nav-ul li:focus-within .nav-link {
-  border-bottom:2px solid var(--core-orange)
- }
- .dropdown-item {
- 	white-space:normal;
- 	display:inline-block;
- }
-.dropdown-item.active,
-.dropdown-item:active {
-	background-color: var(--core-blue);
-}
-  .header #main-nav-ul .dropdown-menu li {
-  	line-height:30px;
-  }
-
-/* search */
-#___gcse_0 {
-	display:none;
-}
-.search-form {
-	width:90%;
-	max-width:935px;
-	margin: 0 auto;
-	padding: 0;
-	border-bottom: 2px solid #9d6851;
-	line-height:1em;
-}
-.search-input {
-	font-family: 'gentonamedium', Arial, sans-serif;
-	font-size:1.65em;
-	line-height:1em;
-	color: var(--core-blue);
-	font-weight: 400;
-	padding: 0.5em;
-	border: medium none;
-	outline:none;
-}
-.search-input:focus {
-	box-shadow:none;
-	border:none;
-}
-.search-input::placeholder {
-	 color: #6e88ef;
-}
-.search-submit,
-.search-submit:hover,
-.search-submit:focus {
-	background: white;
-    border: none;
-    padding: 0;
-}
-
-
-/* other nav */
-.page-template-page-section-nav .section-navigation {
-	top:120px;
 }
 
 /* footer */
@@ -115,29 +49,32 @@ Text Domain: 	ufl_stamatschild
   line-height:68px
  }
 }
-.display {
-	font-family: "Billion Dreams";
-	text-transform: unset;
-	letter-spacing: -2px;
-	line-height: 0.8;
-	font-weight:400;
+.entry-content a {
+  font-family: "gentonamedium";
+  color: #0021a5;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: #000;
+  }
 }
-// .site-content a:not(.button) {
-// 	font-family: "gentonamedium";
-// 	transition: color 0.3s ease,
-// 	background 0.3s ease;
-// 	text-decoration:none;
-// }
-// .site-content a:hover:not(.button),
-// .site-content a:focus:not(.button) {
-// 	text-decoration:underline;
-// }
+.fullwidth-text-block, .entry-content {
+	.wp-block-button a, a.button {
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}
 a, .page-link {
 	color:var(--core-blue);
 }
 a:hover, a:focus {
 	color:var(--black);
 }
+
 .page-link:hover, .page-link:focus {
 	color:var(--black);
 	background-color: var(--warm-grey-1);
@@ -171,27 +108,9 @@ a:hover, a:focus {
 	line-height: 28px;
 }
 
-//things that either don't work or are not supported by our network, so we're hiding them
+//things that don't work, so we're hiding them
 #facultyLoadmore  {
 	display:none;
 }
 
-
-/* forms */
-#content ul.gform_fields {
-	padding-left:0;
-}
-input[type="submit"], input.button, 
-.gform_button {
-	border: 1px solid var(--core-blue);
-	cursor: pointer;
-	font-size: 26px;
-	padding: 15px 40px;
-	background-color: transparent;
-	color: var(--cool-gray-11);
-	&:hover, &:focus {
-		background-color: #343741;	
-		color: #fff;		
-	}
-}
 

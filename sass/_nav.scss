@@ -1,0 +1,33 @@
+/* ---------------------------
+Navigation
+----------------------------*/
+
+// primary nav 
+.header #main-nav-ul .nav-link {
+  text-transform:uppercase;
+  margin-top:8px;
+  margin-bottom:0;
+  padding-bottom:0;
+  border-bottom:#fa471600 2px solid;
+ }
+ .header #main-nav-ul li:hover .nav-link,
+ .header #main-nav-ul li:focus .nav-link,
+ .header #main-nav-ul li:focus-within .nav-link {
+  border-bottom:2px solid var(--core-orange)
+ }
+ .dropdown-item {
+ 	white-space:normal;
+ 	display:inline-block;
+ }
+.dropdown-item.active,
+.dropdown-item:active {
+	background-color: var(--core-blue);
+}
+.header #main-nav-ul .dropdown-menu li {
+  	line-height:30px;
+}
+
+// section navigation
+.page-template-page-section-nav .section-navigation {
+	top:120px;
+}

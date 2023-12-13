@@ -1,0 +1,36 @@
+/* search */
+#___gcse_0 {
+	display:none;
+}
+.search-form {
+	width:90%;
+	max-width:935px;
+	margin: 0 auto;
+	padding: 0;
+	border-bottom: 2px solid #9d6851;
+	line-height:1em;
+}
+.search-input {
+	font-family: 'gentonamedium', Arial, sans-serif;
+	font-size:1.65em;
+	line-height:1em;
+	color: var(--core-blue);
+	font-weight: 400;
+	padding: 0.5em;
+	border: medium none;
+	outline:none;
+}
+.search-input:focus {
+	box-shadow:none;
+	border:none;
+}
+.search-input::placeholder {
+	 color: #6e88ef;
+}
+.search-submit,
+.search-submit:hover,
+.search-submit:focus {
+	background: white;
+    border: none;
+    padding: 0;
+}
