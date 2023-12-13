@@ -115,16 +115,23 @@ Text Domain: 	ufl_stamatschild
   line-height:68px
  }
 }
-.site-content a:not(.button) {
-	font-family: "gentonamedium";
-	transition: color 0.3s ease,
-	background 0.3s ease;
-	text-decoration:none;
+.display {
+	font-family: "Billion Dreams";
+	text-transform: unset;
+	letter-spacing: -2px;
+	line-height: 0.8;
+	font-weight:400;
 }
-.site-content a:hover:not(.button),
-.site-content a:focus:not(.button) {
-	text-decoration:underline;
-}
+// .site-content a:not(.button) {
+// 	font-family: "gentonamedium";
+// 	transition: color 0.3s ease,
+// 	background 0.3s ease;
+// 	text-decoration:none;
+// }
+// .site-content a:hover:not(.button),
+// .site-content a:focus:not(.button) {
+// 	text-decoration:underline;
+// }
 a, .page-link {
 	color:var(--core-blue);
 }
@@ -136,12 +143,39 @@ a:hover, a:focus {
 	background-color: var(--warm-grey-1);
 	border-color: var(--warm-grey-1);
 }
+.hero-caption {
+	background: var(--cool-gray-11);
+	color: #fff;
+	font-size: 16px;
+	font-family: gentonabookitalic;
+	padding: 1em;
+}
+.visual-navigation {
+	padding-top:40px;
+	padding-bottom: 0;
+}
+.fullwidth-text-block {
+	.container {
+		padding-top:0;
+	}
+}
+ .is-style-animated-underline .wp-block-button__link {
+ 	border-left-width: 0;
+ 	border-right-width: 0;
+ }
+
 /* category block styling */
 .wp-block-post-terms {
 	padding: 12px 7%;
 	font-size: 16px;
 	line-height: 28px;
 }
+
+//things that either don't work or are not supported by our network, so we're hiding them
+#facultyLoadmore  {
+	display:none;
+}
+
 
 /* forms */
 #content ul.gform_fields {
@@ -160,3 +194,4 @@ input[type="submit"], input.button,
 		color: #fff;		
 	}
 }
+

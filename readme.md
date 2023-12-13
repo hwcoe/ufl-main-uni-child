@@ -24,6 +24,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Edit search form to use site-limited search.ufl.edu rather than programmable Google Search (eases implementing site-limited search for end users)
 - Add Events Manager event template and custom functions and templates (TODO: styles for booking form, login form, and EM widget)
 - Update 404 template
+- Add custom classes to footer columns to enable CSS targeting
 
 1.0.0-beta
 - Enqueue dependencies, parent theme and child theme styles
