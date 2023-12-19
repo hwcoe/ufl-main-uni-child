@@ -27,7 +27,7 @@ if (!function_exists('hwcoe_socialnetworks')) :
 			$icon = get_stylesheet_directory_uri();
 			$icon .= "/img/spritemap.svg#{$name}";
 			if( !empty($link) ){
-				$social_html = '<a href="' . esc_url($link) . 'target="_blank" class="' . esc_attr($name) . '-icon">';
+				$social_html = '<a href="' . esc_url($link) . '" target="_blank" class="' . esc_attr($name) . '-icon">';
 				$social_html .= '<svg class="ufl-brands ufl-' . esc_attr($name) . '"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' . esc_url($icon) . '"></use></svg>';
 				$social_html .= '<span class="visually-hidden">' . esc_html($title) . '</span></a>';
 				$social_html .= '</a>';
