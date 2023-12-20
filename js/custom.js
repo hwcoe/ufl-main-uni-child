@@ -36,6 +36,12 @@ jQuery(function($) {
 			}
 		}
 	});
+
+	// Responsive embeds
+	// Styled wrapper div around all iframes with src containing youtube or vimeo that is embedded via the classic editor (i.e. has <p> as its parent tag)
+	$('iframe[src*="youtube"],[src*="vimeo"]').parent("p").each(function() {
+		$(this).wrap("<div class=\"wp-block-embed wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\"></div></div>");
+	});
 });
 
 // different-page links
@@ -68,5 +74,4 @@ function displaySearchModalChild(){
   }
 
 // END Search Modal
-
 
