@@ -7,6 +7,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.1.1
+- bugfix: typo in hwcoe_socialnetworks() function 
+- bugfix: Add wrapper divs to classic editor video embeds to make them responsive
+- disable loading of unnecessary/unwanted scripts
+
 1.1.0-beta
 - Add page templates: Page title with no sidebar and Page title with section nav
 - Update parent script enqueueing
