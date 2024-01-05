@@ -7,6 +7,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.1.2
+- bugfix: Add Members Only page option fields to theme files
+
 1.1.1
 - bugfix: typo in hwcoe_socialnetworks() function 
 - bugfix: Add wrapper divs to classic editor video embeds to make them responsive
