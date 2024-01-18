@@ -7,10 +7,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
-1.1.2
+1.1.3-beta
+- Adjust paragraph styling in footer copyright section
+- Unregister widget areas that aren't displayed in the theme 
+
+1.1.2-beta
 - bugfix: Add Members Only page option fields to theme files
 
-1.1.1
+1.1.1-beta
 - bugfix: typo in hwcoe_socialnetworks() function 
 - bugfix: Add wrapper divs to classic editor video embeds to make them responsive
 - disable loading of unnecessary/unwanted scripts
