@@ -92,6 +92,12 @@ if (!function_exists( 'hwcoe_unregister_footer_menu' )) {
 }
 add_action('init', 'hwcoe_unregister_footer_menu');
 
+// unregister Mercury widget areas that aren't displayed in theme
+function hwcoe_unregister_sidebar() {
+    unregister_sidebar( 'top-nav-search' );
+}
+add_action( 'widgets_init', 'hwcoe_unregister_sidebar', 11 );
+ 
 // utility function to remove unwanted <p> tags within shortcodes
 // see https://stackoverflow.com/questions/13510131/remove-empty-p-tags-from-wordpress-shortcodes-via-a-php-functon#answer-49019912
 if (!function_exists( 'custom_filter_shortcode_text' )) {
