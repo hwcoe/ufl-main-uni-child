@@ -13,14 +13,15 @@ function hwcoe_customizer_controls ( $wp_customize ) {
 		'priority' => 40,
 	));
 	
-	$wp_customize->add_setting( 'facebook_url', array( 'default' => 'https://www.facebook.com/UFWertheim/', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'twitter_url', array( 'default' => 'https://twitter.com/ufwertheim/', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'youtube_url', array( 'default' => 'https://www.youtube.com/user/gatorengineering', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'linkedin_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'instagram_url', array( 'default' => 'https://www.instagram.com/ufwertheim/', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'flickr_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
-	$wp_customize->add_setting( 'feed_url', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'facebook_url', array( 'default' => social_url_default( 'facebook_url' ), 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'twitter_url', array( 'default' => social_url_default( 'twitter_url' ), 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'youtube_url', array( 'default' => social_url_default( 'youtube_url' ), 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'linkedin_url', array( 'default' => social_url_default( 'linkedin_url' ), 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'instagram_url', array( 'default' => social_url_default( 'instagram_url' ), 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'flickr_url', array( 'default' => social_url_default( 'flickr_url' ), 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'feed_url', array( 'default' => social_url_default( 'feed_url' ), 'sanitize_callback' => 'esc_url_raw' ));
 	
+
 	$wp_customize->add_control( 'facebook_url', array(
 		'label' => __('Facebook URL', 'ufl_stamatschild'),
 		'description' => __("", 'ufl_stamatschild'),

@@ -9,6 +9,20 @@
 /**
  * Display list of social network links only if they are set in the Customizer theme options
  */
+
+function social_url_default( $setting ) {
+    $defaults = array(
+        'facebook_url' => __( 'https://www.facebook.com/UFWertheim/' ),
+        'twitter_url' => __( 'https://twitter.com/ufwertheim/' ),
+        'youtube_url' => __( 'https://www.youtube.com/user/gatorengineering' ),
+        'linkedin_url' => __( '' ),
+        'instagram_url' => __( 'https://www.instagram.com/ufwertheim/' ),
+        'flickr_url' => __( '' ),
+        'feed_url' => __( '' ),
+    );
+    return $defaults[$setting];
+}
+
 if (!function_exists('hwcoe_socialnetworks')) :
 	function hwcoe_socialnetworks() {
 
@@ -23,7 +37,7 @@ if (!function_exists('hwcoe_socialnetworks')) :
 		);
 		
 		foreach( $social_networks as $name => $title ){
-			$link = get_theme_mod("{$name}_url");
+			$link = get_theme_mod( "{$name}_url", social_url_default( "{$name}_url" ) );
 			$icon = get_stylesheet_directory_uri();
 			$icon .= "/img/spritemap.svg#{$name}";
 			if( !empty($link) ){
