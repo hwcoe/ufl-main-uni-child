@@ -42,15 +42,23 @@ Text Domain: 	ufl_stamatschild
 	background-color: #000;
 	color:#fff;
 }
+.wp-post-image {
+	max-width: 100%;
+	height:auto;
+}
 .entry-header h1 {
 	font-size:48px;
-  	line-height:54px;
+  line-height:54px;
 }
 @media (min-width:800px) {
 .entry-header h1 {
   font-size:62px;
   line-height:68px
  }
+}
+.post-template .entry-header h1 {
+	font-size:48px;
+  line-height:54px;
 }
 .entry-content a {
   font-family: "gentonamedium";
@@ -99,10 +107,12 @@ a:hover, a:focus {
 		padding-top:0;
 	}
 }
- .is-style-animated-underline .wp-block-button__link {
+
+// buttons
+.is-style-animated-underline .wp-block-button__link {
  	border-left-width: 0;
  	border-right-width: 0;
- }
+}
 
 /* category block styling */
 .wp-block-post-terms {
