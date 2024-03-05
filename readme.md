@@ -7,11 +7,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.1.4-beta
+- Bugfix: remove duplicated content display in default page template
+
 1.1.3-beta
 - Adjust paragraph styling in footer copyright section
 - Adjust post template styles
 - Unregister widget areas that aren't displayed in the theme 
 - Add social media link defaults to front end display 
+- Replace WordPress ob_end_flush functionality (see https://stackoverflow.com/questions/38693992/notice-ob-end-flush-failed-to-send-buffer-of-zlib-output-compression-1-in)
 
 1.1.2-beta
 - bugfix: Add Members Only page option fields to theme files

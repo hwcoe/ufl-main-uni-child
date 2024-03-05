@@ -40,13 +40,6 @@ if (!$disable_breadcrumbs) {
 	  		</div>
 		<?php endif; ?>
 
-
-    <!-- Hook to add something nice -->
-    <!-- <?php bs_after_primary(); ?>
-    <?php parse_blocks( $post->post_content ); ?>
-        <main id="main" class="site-main">
-            <?php the_content(); ?>
-        </main> -->
     </div>
 </div>
 <?php
