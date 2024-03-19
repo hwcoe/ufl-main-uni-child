@@ -149,3 +149,17 @@ function deregister_polyfill(){
 
 }
 add_action( 'wp_enqueue_scripts', 'deregister_polyfill');
+
+function hwcoe_add_theme_colors()
+{
+    $existing = get_theme_support('editor-color-palette');
+    $new = array_merge($existing[0], array(
+        array(
+            'name'  => __('Dark Gray', 'ufl_stamatschild'),
+            'slug'  => 'dark-gray',
+            'color' => '#343741',
+        ),
+    ));
+    add_theme_support('editor-color-palette',  $new);
+}
+add_action('after_setup_theme', 'hwcoe_add_theme_colors', 20);
