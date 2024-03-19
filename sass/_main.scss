@@ -9,13 +9,48 @@ License URI: 	https://ufl.edu
 Text Domain: 	ufl_stamatschild
 */
 
-// :root{
-// 	--color-variable: #FA4616;
-// }
+:root{
+	--core-orange: #FA4616;
+	--core-blue: #0021A5;
 
+	--bottlebrush: #D32737;
+	--alachua: #F2A900;
+	--gator: #22884C;
+	--dark-blue: #002657;
+	--perennial: #6A2A60;
+
+	--cool-gray-11: #343741;
+	--cool-gray-3: #C7C9C8;
+	--warm-grey-1: #D8D4D7;
+	--light-gray: #f4f6f6;
+}
+.has-light-gray-background-color {
+	background:var(--light-gray);
+}
+.has-dark-gray-background-color {
+	background:var(--cool-gray-11);
+	h2,h3,h4,h5,h6,p,li,a {
+		color:#fff;
+	}
+	a:hover, a:focus {
+		color:#fff;	
+	}
+}
+.has-blue-background-color {
+	background:var(--core-blue);
+}
+.has-orange-background-color {
+	background:var(--core-orange);
+}
+.has-blue-color {
+	color: var(--core-blue);
+}
+.has-orange-color {
+	color: var(--core-orange);
+}
 .header, 
 .section-navigation .section-navigation-inner {
-	z-index: 9999;
+	z-index: 999999;
 }
 
 /* footer */
@@ -85,7 +120,6 @@ a, .page-link {
 a:hover, a:focus {
 	color:var(--black);
 }
-
 .page-link:hover, .page-link:focus {
 	color:var(--black);
 	background-color: var(--warm-grey-1);
@@ -107,6 +141,9 @@ a:hover, a:focus {
 		padding-top:0;
 	}
 }
+.tab-block .tab-block-wrapper {
+	align-items:baseline;
+}
 
 // buttons
 .is-style-animated-underline .wp-block-button__link {
@@ -119,6 +156,19 @@ a:hover, a:focus {
 	padding: 12px 7%;
 	font-size: 16px;
 	line-height: 28px;
+}
+
+// text links in dark bg areas
+// featured video
+.featured-video {
+	.card-title a, .card-description a {
+		&:link, &:visited {
+			color:#fff;
+		}
+		&:hover, &:active, &:focus {
+			text-decoration:none;
+		}
+	}
 }
 
 //things that don't work, so we're hiding them

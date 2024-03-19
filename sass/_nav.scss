@@ -17,7 +17,8 @@ Navigation
  }
  .dropdown-item {
  	white-space:normal;
- 	display:inline-block;
+ 	// display:inline-block;
+  display: table;
  }
 .dropdown-item.active,
 .dropdown-item:active {
