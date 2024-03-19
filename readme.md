@@ -9,6 +9,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 1.1.4-beta
 - Bugfix: remove duplicated content display in default page template
+- Bugfix: add CSS variables so .hero-caption has background color in editor
+- Bugfix: check if DONOTCACHEPAGE constant is already set when members only option is enabled
+- Change .tab-block-wrapper alignment to baseline rather than center (keeps tab block nav from dropping too far with longer content)
+- Change main menu dropdown item display property for Safari
+- Make link color white in dark bg content areas
+- Add support for dark gray background color elements in editor color palette
 
 1.1.3-beta
 - Adjust paragraph styling in footer copyright section

@@ -8,6 +8,11 @@
  * @package Bootscore
  */
 
+if ( ufl_check_page_visitor_level( $post->ID ) > 0 ) { 
+	if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+		define( 'DONOTCACHEPAGE', 1 ); 
+	}
+}
 get_header();
 
 $disable_breadcrumbs = get_field('disable_breadcrumbs');
