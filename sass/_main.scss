@@ -29,15 +29,24 @@ Text Domain: 	ufl_stamatschild
 }
 .has-dark-gray-background-color {
 	background:var(--cool-gray-11);
-	h2,h3,h4,h5,h6,p,li,a {
-		color:#fff;
-	}
-	a:hover, a:focus {
-		color:#fff;	
-	}
 }
 .has-blue-background-color {
 	background:var(--core-blue);
+}
+.has-blue-background-color,
+.has-dark-gray-background-color {
+	h2,h3,h4,h5,h6,p,li,a {
+		color:#fff;
+	}
+	a {
+		&:link, &:visited {
+			color:#fff;
+			text-decoration: underline;
+		}
+		&:hover, &:active, &:focus {
+			text-decoration:none;
+		}
+	}
 }
 .has-orange-background-color {
 	background:var(--core-orange);
