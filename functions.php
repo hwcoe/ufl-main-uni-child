@@ -44,7 +44,7 @@ function ufl_uni_child_enqueue_scripts() {
 	$theme        = wp_get_theme();
 	// parent scripts 
 	wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', false, '', true);
-	// wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/js/lightbox.js', false, '', true);
+	wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/js/lightbox.js', false, '', true);
 	wp_enqueue_script('directional-hover-js', get_template_directory_uri() . '/js/jquery.directional-hover.min.js', false, '', true);
 	wp_register_script( 'misha_scripts', get_template_directory_uri() . '/js/ajax-script.js', array('jquery') );
 	
@@ -52,6 +52,12 @@ function ufl_uni_child_enqueue_scripts() {
 	  // custom.js
 	  wp_enqueue_script('child-custom', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
 }
+
+function ufl_uni_child_enqueue_lightbox() {
+	wp_dequeue_script( 'lightbox-js' );
+}
+// add_action( 'wp_print_scripts', 'ufl_uni_child_enqueue_lightbox', 100 );
+
 
 add_action( 'enqueue_block_editor_assets', 'ufl_uni_child_gutenberg_scripts' );
 function ufl_uni_child_gutenberg_scripts() {
