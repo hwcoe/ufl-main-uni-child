@@ -7,7 +7,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
-1.1.4-beta
+1.2.0
+- Bugfix: fix z-index setting where masthead hides WP admin bar dropdown
 - Bugfix: remove duplicated content display in default page template
 - Bugfix: add CSS variables so .hero-caption has background color in editor
 - Bugfix: check if DONOTCACHEPAGE constant is already set when members only option is enabled
@@ -15,8 +16,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Change main menu dropdown item display property for Safari
 - Make link color white in dark bg content areas
 - Add support for dark gray background color elements in editor color palette
-
-1.1.3-beta
 - Adjust paragraph styling in footer copyright section
 - Adjust post template styles
 - Unregister widget areas that aren't displayed in the theme 
