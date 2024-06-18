@@ -23,7 +23,11 @@ get_header();
 		   ?>
 		 </small>
 		</p>
-		<?php bootscore_post_thumbnail(); ?>
+		<?php 
+			if (!get_field('hide_featured_image')) {
+				bootscore_post_thumbnail();	
+			} 
+		?>
 	</header>
 
 	<div id="content" class="single-news container py-5 mt-4">
