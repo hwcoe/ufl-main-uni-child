@@ -58,3 +58,4 @@ cgi-bin/
 sftp-config.json
 phpinfo.php
 *sublime*
+.vscode
