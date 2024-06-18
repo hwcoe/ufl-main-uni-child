@@ -44,7 +44,6 @@ function ufl_uni_child_enqueue_scripts() {
 	$theme        = wp_get_theme();
 	// parent scripts 
 	wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', false, '', true);
-	wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/js/lightbox.js', false, '', true);
 	wp_enqueue_script('directional-hover-js', get_template_directory_uri() . '/js/jquery.directional-hover.min.js', false, '', true);
 	wp_register_script( 'misha_scripts', get_template_directory_uri() . '/js/ajax-script.js', array('jquery') );
 	
@@ -59,7 +58,7 @@ function ufl_uni_child_enqueue_lightbox() {
 // add_action( 'wp_print_scripts', 'ufl_uni_child_enqueue_lightbox', 100 );
 
 
-add_action( 'enqueue_block_editor_assets', 'ufl_uni_child_gutenberg_scripts' );
+// add_action( 'enqueue_block_editor_assets', 'ufl_uni_child_gutenberg_scripts' );
 function ufl_uni_child_gutenberg_scripts() {
 	wp_enqueue_script( 'be-editor', get_template_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_template_directory_uri() . '/assets/js/editor.js' ), true );
 }
@@ -101,6 +100,7 @@ add_action('init', 'hwcoe_unregister_footer_menu');
 // unregister Mercury widget areas that aren't displayed in theme
 function hwcoe_unregister_sidebar() {
     unregister_sidebar( 'top-nav-search' );
+    unregister_sidebar( 'footer-social-icons' );
 }
 add_action( 'widgets_init', 'hwcoe_unregister_sidebar', 11 );
  
