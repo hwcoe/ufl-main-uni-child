@@ -1,12 +1,13 @@
 // WordPress Child Theme styles
-@import 'fonts';
-@import 'forms';
-@import 'main';
-@import 'nav';
-@import 'search';
+@use 'theme-info';
+@use 'fonts';
+@use 'forms';
+@use 'main';
+@use 'nav';
+@use 'search';
 
 // // Plugin styles
-@import 'events-manager';
+@use 'events-manager';
 // @import 'fullcalendar';
 // @import 'tablepress';
 
