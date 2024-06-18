@@ -17,10 +17,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Make link color white in dark bg content areas
 - Add support for dark gray background color elements in editor color palette
 - Adjust paragraph styling in footer copyright section
-- Adjust post template styles
-- Unregister widget areas that aren't displayed in the theme 
+- Adjust post template styles to improve featured image display
+- Add post option to hide featured image in single post display for no-sidebar and sidebar-left templates
+- Unregister top nav search widget area that isn't displayed in the theme 
 - Add social media link defaults to front end display 
 - Replace WordPress ob_end_flush functionality (see https://stackoverflow.com/questions/38693992/notice-ob-end-flush-failed-to-send-buffer-of-zlib-output-compression-1-in)
+- Reconcile Mercury parent theme updates
+	- Unregister parent theme's new social media footer widget (conflicts with child theme option)
+	- Fix JS error in mobile information and resources menus
+	- Change desktop search display if there are no auxiliary menus
+
 
 1.1.2-beta
 - bugfix: Add Members Only page option fields to theme files
