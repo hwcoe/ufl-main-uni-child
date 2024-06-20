@@ -25,9 +25,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Replace WordPress ob_end_flush functionality (see https://stackoverflow.com/questions/38693992/notice-ob-end-flush-failed-to-send-buffer-of-zlib-output-compression-1-in)
 - Reconcile Mercury parent theme updates
 	- Unregister parent theme's new social media footer widget (conflicts with child theme option)
-	- Fix JS error in mobile information and resources menus
+	- Fix JS error causing links not to work in mobile information and resources menus
 	- Change desktop search display if there are no auxiliary menus
-
+	- Override non-child-theme-friendly Mercury Form page template 
 
 1.1.2-beta
 - bugfix: Add Members Only page option fields to theme files

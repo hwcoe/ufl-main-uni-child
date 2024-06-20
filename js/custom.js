@@ -44,19 +44,22 @@ jQuery(function($) {
 	});
 });
 
-// different-page links
+// different-page anchor links
 jQuery ( document ).ready ( function($) {
-var hash= window.location.hash;
-if ( hash == '' || hash == '#' || hash == undefined ) return false;
+	var hash= window.location.hash;
+	if ( hash == '' || hash == '#' || hash == undefined ) return false;
 	var target = $(hash);
 	target = target.length ? target : $('[name=' + hash.slice(1) +']');
 	if (target.length) {
-	// Animate scrolling
-	  $('html,body').stop().animate({ scrollTop: target.offset().top - 60}, 500, 'linear');
+		// Animate scrolling
+		$('html,body').stop().animate({ scrollTop: target.offset().top - 60}, 500, 'linear');
 	}
 });
 
-// END smooth scrolling
+jQuery(document).ready(function ($) {
+	jQuery('.mobile-secondary-dropdown').find('.nav-link').removeAttr('data-bs-toggle');
+	jQuery('.mobile-secondary-dropdown').find('.dropdown-toggle-top').attr('data-bs-toggle', 'dropdown');
+});
 
 // Search Modal
 function displaySearchModalChild(){
