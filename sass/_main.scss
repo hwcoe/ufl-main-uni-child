@@ -64,6 +64,7 @@
 	margin:0;
 	color: #fff;
 }
+
 /* content */
 .featured-full-width-img {
 	background-position: center center;
@@ -142,6 +143,18 @@ a:hover, a:focus {
 .tab-block .tab-block-wrapper {
 	align-items:baseline;
 }
+#content {
+	ul.wp-block-latest-posts,
+	ul.wp-block-post-template {
+		padding-left:0;
+		list-style:none;
+	}
+}
+.wp-block-latest-posts__featured-image {
+	&.alignleft, &.alignright {
+		margin-bottom:1em;
+	}
+} 
 
 // buttons
 .is-style-animated-underline .wp-block-button__link {
