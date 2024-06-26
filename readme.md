@@ -7,6 +7,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.3.0
+- Add index.php to prevent directory listing of acf-json files
+
 1.2.0
 - Bugfix: fix z-index setting where masthead hides WP admin bar dropdown
 - Bugfix: remove duplicated content display in default page template
