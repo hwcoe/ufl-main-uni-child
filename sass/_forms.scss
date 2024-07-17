@@ -5,14 +5,21 @@
 }
 input[type="submit"], input.button, 
 .gform_button {
-	border: 1px solid var(--core-blue);
-	cursor: pointer;
-	font-size: 26px;
-	padding: 15px 40px;
-	background-color: transparent;
-	color: var(--cool-gray-11);
-	&:hover, &:focus {
-		background-color: #343741;	
-		color: #fff;		
-	}
+	// border: 1px solid var(--core-blue);
+	// cursor: pointer;
+	// font-size: 26px;
+	// padding: 15px 40px;
+	// background-color: transparent;
+	// color: var(--cool-gray-11);
+	// &:hover, &:focus {
+	// 	background-color: #343741;	
+	// 	color: #fff;		
+	// }
+}
+.form-ufl {
+	.gform_legacy_markup_wrapper .gfield_checkbox li input,
+	.gform_legacy_markup_wrapper .gfield_checkbox li input[type="checkbox"],
+	.gform_legacy_markup_wrapper .gfield_radio li input[type="radio"] {
+		display:none;
+	}	
 }
