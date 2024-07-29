@@ -7,16 +7,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
-1.3.1
+1.3.0
+- Add index.php to prevent directory listing of acf-json files
+- Remove list bullets and edit styles for latest posts and query loop blocks 
 - Fix general form styling 
 - Edit Mercury Form Layout page template
 	- Remove overly opinionated theme-overriding bootstrap styles
 	- Add Disable Breadcrumbs and Members Only functionality
 	- Display page title, since content container has padding and doesn't really mesh with UFL blocks
-
-1.3.0
-- Add index.php to prevent directory listing of acf-json files
-- Remove list bullets and edit styles for latest posts and query loop blocks 
+- Edit enqueueing of be-editor scripts with correct syntax to fix PHP error
 
 1.2.0
 - Bugfix: fix z-index setting where masthead hides WP admin bar dropdown
