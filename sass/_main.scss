@@ -124,6 +124,26 @@ a:hover, a:focus {
 	background-color: var(--warm-grey-1);
 	border-color: var(--warm-grey-1);
 }
+
+#content {
+	ul.wp-block-latest-posts,
+	ul.wp-block-post-template {
+		padding-left:0;
+		list-style:none;
+	}
+}
+.wp-block-latest-posts__featured-image {
+	&.alignleft, &.alignright {
+		margin-bottom:1em;
+	}
+} 
+
+// ufl blocks
+.news-landing-header .news-hero-featured,
+.cta-button-wrapper .cta-button .cta-title,
+.visual-navigation .visual-navigation-wrapper .visual-navigation-link p {
+	z-index: 9999;
+}
 .hero-caption {
 	background: var(--cool-gray-11);
 	color: #fff;
@@ -143,18 +163,6 @@ a:hover, a:focus {
 .tab-block .tab-block-wrapper {
 	align-items:baseline;
 }
-#content {
-	ul.wp-block-latest-posts,
-	ul.wp-block-post-template {
-		padding-left:0;
-		list-style:none;
-	}
-}
-.wp-block-latest-posts__featured-image {
-	&.alignleft, &.alignright {
-		margin-bottom:1em;
-	}
-} 
 
 // buttons
 .is-style-animated-underline .wp-block-button__link {
