@@ -17,6 +17,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Display page title, since content container has padding and doesn't really mesh with UFL blocks including the title block
 - Edit enqueueing of be-editor scripts with correct syntax to fix PHP error
 - Override z-indexes for ufl-blocks elements that obscure nav menus
+- Override home.php template so post content does not appear at the top of the latest posts display
 
 1.2.0
 - Bugfix: fix z-index setting where masthead hides WP admin bar dropdown
