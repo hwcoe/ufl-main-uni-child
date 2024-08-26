@@ -13,6 +13,9 @@
 	--warm-grey-1: #D8D4D7;
 	--light-gray: #f4f6f6;
 }
+body {
+	 font-family:"gentonabook";
+}
 .has-light-gray-background-color {
 	background:var(--light-gray);
 }
