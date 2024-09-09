@@ -29,6 +29,23 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "post"
+            },
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "single-templates\/single-sidebar-left.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            },
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "single-templates\/single-sidebar-none.php"
             }
         ]
     ],
@@ -41,5 +58,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718738062
+    "modified": 1725893694
 }

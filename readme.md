@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 1.3.0
 - Add index.php to prevent directory listing of acf-json files
 - Remove list bullets and edit styles for Latest Posts and Query Loop blocks 
-- Fix general form styling 
+- Fix general form styling and body font default
 - Edit Mercury Form Layout page template
 	- Remove overly opinionated theme-overriding bootstrap styles
 	- Add Disable Breadcrumbs and Members Only functionality
@@ -18,6 +18,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Edit enqueueing of be-editor scripts with correct syntax to fix PHP error
 - Override z-indexes for ufl-blocks elements that obscure nav menus
 - Override home.php template so post content does not appear at the top of the latest posts display
+- Enable "hide featured image in single post display" post option for no-sidebar and sidebar-left post templates only
 
 1.2.0
 - Bugfix: fix z-index setting where masthead hides WP admin bar dropdown
