@@ -35,7 +35,7 @@ get_header();
                 <div class="row">
                   <!-- Featured Image-->
                   <?php if (has_post_thumbnail())
-                    echo '<div class="card-img-left-md col-lg-5">' . get_the_post_thumbnail(null, 'medium') . '</div>';
+                    echo '<div class="card-img-left-md col-lg-5">' . get_the_post_thumbnail(null, 'large') . '</div>';
                   ?>
                   <div class="col">
                     <div class="card-body">
@@ -53,8 +53,6 @@ get_header();
                         <small class="text-muted mb-2">
                           <?php
                           bootscore_date();
-                          bootscore_author();
-                          bootscore_comments();
                           bootscore_edit();
                           ?>
                         </small>

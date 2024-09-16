@@ -27,8 +27,6 @@ get_header();
 							<small class="text-muted">
 								<?php
 									bootscore_date();
-									bootscore_author();
-									bootscore_comment_count();
 								?>
 							</small>
 						</p>

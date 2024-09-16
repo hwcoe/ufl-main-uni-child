@@ -9,6 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 1.4.0
 - Change site search from search.ufl.edu to site-specific Google Custom Search Engine with 'data-as_sitesearch' attribute
+- Remove author from front end post templates and archive
 
 1.3.0
 - Add index.php to prevent directory listing of acf-json files
