@@ -30,8 +30,18 @@
 					<div class="row">
 
 						<div class="col-12 col-md-6 footer-col-logo pb-5">
-				
-						<?php if ( get_theme_mod( 'display_header_content', false ) && !$second_featured_image )  {
+
+						<?php     
+							$footer_image_id = get_theme_mod( 'footer_image' );
+							if ( $footer_image_id ) {
+						?>
+							<a class="navbar-brand" href="<?= home_url(); ?>" alt="Home">
+								<span><?php echo wp_get_attachment_image( $footer_image_id, 'full' ); ?>
+									<span class="visually-hidden">School Logo Link</span>
+								</span>
+							</a>
+						<?php } 
+							elseif ( get_theme_mod( 'display_header_content', false ) && !$second_featured_image )  {
 								$alternate_logo = get_theme_mod( 'alternate_logo' );
 								$alternate_logo_text = get_theme_mod( 'alternate_logo_text' );
 								$alternate_logo_url = wp_get_attachment_image_url( $alternate_logo ) ? wp_get_attachment_image_url( $alternate_logo, 'full' ) : get_stylesheet_directory_uri() . '/img/UF_Monogram_Orange.png';
@@ -59,14 +69,11 @@
 						<?php } else { ?>
 							<a class="navbar-brand" href="<?= home_url(); ?>" alt="Home">
 							<span><?php     
-								$footer_image_id = get_theme_mod( 'footer_image' );
-									if ( $footer_image_id ) {
-											// Display the footer image
-											echo wp_get_attachment_image( $footer_image_id, 'full' );
-									} else {
 									the_custom_logo();
 									echo '<span class="visually-hidden">School Logo Link</span>';
-								}?></span>
+									?>
+									
+								</span>
 							</a>
 						<?php } ?>
 					</div>
