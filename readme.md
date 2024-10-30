@@ -8,8 +8,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ## Changelog
 
 1.4.1
+- Switch display property of mega menu dropdown items to inline-block for Safari on desktop
+- Fix background and text color of active links in mobile primary nav
 - Update dependencies
-
 
 1.4.0
 - Change site search from search.ufl.edu to site-specific Google Custom Search Engine with 'data-as_sitesearch' attribute

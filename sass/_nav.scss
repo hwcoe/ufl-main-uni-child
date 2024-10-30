@@ -15,18 +15,29 @@ Navigation
  .header #main-nav-ul li:focus-within .nav-link {
   border-bottom:2px solid var(--core-orange)
  }
+ .header #main-nav-ul .dropdown-menu li {
+    line-height:30px;
+}
  .dropdown-item {
  	white-space:normal;
+  padding: .25rem .5rem;
  	// display:inline-block;
-  display: table;
+  // display: table;
  }
 .dropdown-item.active,
 .dropdown-item:active {
 	background-color: var(--core-blue);
 }
-.header #main-nav-ul .dropdown-menu li {
-  	line-height:30px;
+
+@media (max-width:1409px) {
+  .header .dropdown-menu a.active:hover, .header .dropdown-menu a.active:focus {
+    color: var(--cool-gray-11) !important;
+  }
+  .header .dropdown-menu a.active {
+    color: var(--bs-dropdown-link-active-color) !important;
+  }
 }
+
 
 // section navigation
 .page-template-page-section-nav .section-navigation {
