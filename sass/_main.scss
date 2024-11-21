@@ -55,6 +55,27 @@ body {
 }
 
 /* footer */
+.footer_widget {
+	h2 {
+		border-bottom: 4px solid #e8552f;
+		font-family: "gentonasemibold";
+		font-size: 24px;
+		line-height: 40px;
+		text-align: left;
+		color: #fff;
+		padding-bottom: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+}
+#content .footer_widget {
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			padding-left: 0;
+		}
+	}
+}
 .ufl-linkedin,
 .ufl-flickr,
 .ufl-feed {
