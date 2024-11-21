@@ -1,18 +1,20 @@
 <?php
 /* Template Name: News Template */
 get_header();
-$years = get_posts_years_array();
+$years = get_posts_years_array_child();
 $postid = get_option('page_for_posts');
 ?>
 
 <div id="content" class="site-content news test-home">
   <div id="primary" class="news-landing-body content-area">
     <?php
-    // $content_post = get_post($postid);
-    // $content = $content_post->post_content;
-    // $content = apply_filters('the_content', $content);
-    // $content = str_replace(']]>', ']]&gt;', $content);
-    // echo $content;
+    if( $postid != 0 ) {
+      $content_post = get_post($postid);
+      $content = $content_post->post_content;
+      $content = apply_filters('the_content', $content);
+      $content = str_replace(']]>', ']]&gt;', $content);
+      echo $content;
+    }
     ?>
 
     <div class="container">

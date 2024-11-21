@@ -169,3 +169,23 @@ function hwcoe_add_theme_colors()
     add_theme_support('editor-color-palette',  $new);
 }
 add_action('after_setup_theme', 'hwcoe_add_theme_colors', 20);
+
+// override parent theme function get_posts_years_array() for MySQL 8 
+function get_posts_years_array_child() {
+	global $wpdb;
+	$result = array();
+	$years = $wpdb->get_results(
+	  "SELECT YEAR(post_date) 
+    FROM {$wpdb->posts} 
+    WHERE post_status = 'publish' 
+    GROUP BY YEAR(post_date) 
+    ORDER BY YEAR (post_date) DESC",
+	  ARRAY_N
+	);
+	if (is_array($years) && count($years) > 0) {
+	  foreach ($years as $year) {
+		$result[] = $year[0];
+	  }
+	}
+	return $result;
+  }

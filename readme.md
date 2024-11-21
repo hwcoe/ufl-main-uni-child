@@ -7,6 +7,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.4.2
+- Allow display of posts page content above latest posts
+- Bugfix: keep most recently published post content from displaying above latest posts
+- Bugfix: update SQL syntax for displaying latest posts date filter
+- Add widget-title styles as default for h2 in footer
+
 1.4.1
 - Switch display property of mega menu dropdown items to inline-block for Safari on desktop
 - Fix background and text color of active links in mobile primary nav
