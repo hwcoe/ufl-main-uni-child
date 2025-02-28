@@ -12,6 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Bugfix: keep most recently published post content from displaying above latest posts
 - Bugfix: update SQL syntax for displaying latest posts date filter
 - Adjust footer-widget styles for h2 and ul
+- Adjust padding-top for fullwidth-text-block container
 
 1.4.1
 - Switch display property of mega menu dropdown items to inline-block for Safari on desktop
