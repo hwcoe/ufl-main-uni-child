@@ -26,6 +26,7 @@ Navigation
 .dropdown-item.active,
 .dropdown-item:active {
 	background-color: var(--core-blue);
+  color: #fff;
 }
 
 @media (max-width:1409px) {
