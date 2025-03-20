@@ -91,15 +91,16 @@ body {
 
 /* content */
 
-#main {
+h2,.h2 {
+	font-size: 2.25rem;
+	line-height: 2.625rem;
+}
+.entry-content, .fullwidth-text-block {
 	p {
 		font-size: 1.25rem;
 		line-height: 1.75rem;
 	}
-	h2,.h2 {
-		font-size: 2.25rem;
-		line-height: 2.625rem;
-	}
+
 	h3,.h3 {
 		font-size: 2rem;
 		line-height: 2.25rem;
@@ -119,19 +120,21 @@ body {
 		
 	}
 }
-#main {
-	@media (min-width:800px) {
-		h2,.h2 {
-			font-size: 3.625rem;
-			line-height: 4rem;
-		}
+
+@media (min-width:800px) {
+	h2,.h2 {
+		font-size: 3.625rem;
+		line-height: 4rem;
+	}
+	.entry-content, .fullwidth-text-block {
+		
 		h3,.h3 {
 			font-size: 3rem;
 			line-height:3.5rem;
 		}
 		h4,.h4 {
-			font-size: 2.25rem;
-			line-height: 2.625rem;
+			font-size: 2rem;
+			line-height: 2.5rem;
 		}
 		h5,.h5 {
 			font-size: 1.875rem;
@@ -233,8 +236,20 @@ a:hover, a:focus {
 		padding-top:45px;
 	}
 }
-.tab-block .tab-block-wrapper {
-	align-items:baseline;
+.tab-block {
+	.tab-block-wrapper {
+		align-items:baseline;
+	}
+	.tab-block-wrapper .desktop-tab-link-col .tab-link {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		line-height: 36px;
+	}
+	h2 {
+		margin-bottom: 2rem;
+		font-family: gentonabook;
+	}
+
 }
 
 // buttons
