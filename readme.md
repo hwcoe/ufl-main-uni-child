@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 1.4.2
 - Switch display property of .dropdown-item to inline-block (because we didn't do that fr in 1.4.1)
-- Adjust p and H tags and styles to use REM and have a more defined visual hierarchy
+- Adjust paragraph and header tags and styles to use REM font size and have a more defined visual hierarchy
 - Add explicitly defined color to .dropdown-item.active to resolve issue with active menu item color
 
 1.4.1
