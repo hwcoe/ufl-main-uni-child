@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Switch display property of .dropdown-item to inline-block (because we didn't do that fr in 1.4.1)
 - Adjust paragraph and header tags and styles to use REM font size and have a more defined visual hierarchy
 - Add explicitly defined color to .dropdown-item.active to resolve issue with active menu item color
+- Update dependencies
 
 1.4.1
 - Allow display of posts page content above latest posts
