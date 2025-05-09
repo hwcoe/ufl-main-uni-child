@@ -24,7 +24,8 @@ get_header();
 			</section>
 			<section class="mb-5">
 				<hr />
-				<?php get_search_form(); ?>
+				
+				<!-- <?php get_search_form(); ?> -->
 			</section>
 
 		</main><!-- #main -->

@@ -1,3 +1,4 @@
+/* custom styling */
 :root{
 	--core-orange: #FA4616;
 	--core-blue: #0021A5;
@@ -12,9 +13,25 @@
 	--cool-gray-3: #C7C9C8;
 	--warm-grey-1: #D8D4D7;
 	--light-gray: #f4f6f6;
+
+	--social-media-icons-background: #3350a5;
+	--social-media-icons-background-hover: #ffffff;
+	--social-media-icons-hover: #0021a5;
+	--header-gradient-1: #0021a5;
+	--header-gradient-2: #011877;
+	--header-gradient-3: #00d4ff;
+	--light-weight-sans: "IBM Plex light";
+	--book-weight-sans: "IBM Plex regular";
+	--medium-weight-sans: "IBM Plex medium";
+	--medium-italic-sans: "IBM Plex medium italic";
+	--semi-bold-sans: "IBM Plex semibold";
+	--book-bold-sans: "IBM Plex bold";
+	--bold-italic-sans: "IBM Plex bold italic";
+	--extrabold-italic-sans: "IBM Plex bold italic";
+	--display-script: "Billion Dreams"
 }
 body {
-	 font-family:"gentonabook";
+	font-family:var(--book-weight-sans), Arial, sans-serif;
 }
 .has-light-gray-background-color {
 	background:var(--light-gray);
@@ -55,12 +72,12 @@ body {
 }
 
 /* footer */
-.footer_widget {
+footer {
 	h2 {
 		border-bottom: 4px solid #e8552f;
-		font-family: "gentonasemibold";
-		font-size: 24px;
-		line-height: 40px;
+		font-family: var(--semi-bold-sans), Arial, sans-serif;
+		font-size: 1.75rem;
+		line-height: 2rem;
 		text-align: left;
 		color: #fff;
 		padding-bottom: 1.5rem;
@@ -110,7 +127,7 @@ h5,.h5 {
 h6,.h6 {
 	font-size: 1.25rem;
 	line-height: 1.75rem;
-	font-family: "gentonasemibold";
+	font-family: var(--semi-bold-sans), Arial, sans-serif;
 }
 p {
 	font-size: 1.25rem;
@@ -160,15 +177,15 @@ p {
 	}
 }
 .entry-content a {
-  font-family: "gentonamedium";
-  color: #0021a5;
-  text-decoration: none;
+	font-family: var(--medium-weight-sans), Arial, sans-serif;
+	color: #0021a5;
+	text-decoration: none;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    color: #000;
-  }
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		color: #000;
+	}
 }
 .fullwidth-text-block, .entry-content {
 	.wp-block-button a, a.button {
@@ -191,11 +208,29 @@ a:hover, a:focus {
 }
 
 #content {
+	ul {
+		list-style:none;
+	}
 	ul.wp-block-latest-posts,
 	ul.wp-block-post-template {
 		padding-left:0;
-		list-style:none;
+		
 	}
+}
+#sidebar {
+	h2 {
+		@media (min-width:800px) {
+			font-size: 2.25rem;
+  			line-height: 2.625rem;
+		}
+	}
+	#content{
+		ol, ul {
+			li::before {
+				content:"";
+			}
+		}
+	} 
 }
 .wp-block-latest-posts__featured-image {
 	&.alignleft, &.alignright {
@@ -213,7 +248,7 @@ a:hover, a:focus {
 	background: var(--cool-gray-11);
 	color: #fff;
 	font-size: 16px;
-	font-family: gentonabookitalic;
+	// font-family: gentonabookitalic;
 	padding: 1em;
 }
 .visual-navigation {
@@ -236,15 +271,25 @@ a:hover, a:focus {
 	}
 	h2 {
 		margin-bottom: 2rem;
-		font-family: gentonabook;
+		font-family: var(--book-weight-sans), Arial, sans-serif;
 	}
 
 }
 
 // buttons
 .is-style-animated-underline .wp-block-button__link {
- 	border-left-width: 0;
- 	border-right-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+.btn-outline-primary {
+	--bs-btn-color: var(--core-blue);
+	--bs-btn-border-color: var(--core-blue);
+	--bs-btn-hover-bg: var(--core-blue);
+	--bs-btn-hover-border-color: var(--core-blue);
+	--bs-btn-active-bg: var(--core-blue);
+	--bs-btn-active-border-color: var(--core-blue);
+	--bs-btn-disabled-color: var(--core-blue);
+	--bs-btn-disabled-border-color: var(--core-blue);
 }
 
 /* category block styling */

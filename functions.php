@@ -38,6 +38,9 @@ function ufl_uni_child_enqueue_styles() {
 		array( 'main' ),
 		$theme->get( 'Version' ) // This only works if you have Version defined in the style header.
 	);
+
+	// wp_enqueue_style('quotes-font', 'https://use.typekit.net/nfi5exw.css', array(), null, true);
+	// wp_enqueue_style('cinemascript-font', 'https://use.typekit.net/ugd3ezh.css', array(), null, true);
 }
 add_action( 'wp_enqueue_scripts', 'ufl_uni_child_enqueue_scripts' );
 function ufl_uni_child_enqueue_scripts() {

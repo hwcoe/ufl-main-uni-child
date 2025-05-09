@@ -10,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 1.4.3
 - Remove WP version info from head and feeds
 - Remove WP version info from enqueued scripts
+- Update with new UF branding fonts
 
 1.4.2
 - Switch display property of .dropdown-item to inline-block (because we didn't do that fr in 1.4.1)
