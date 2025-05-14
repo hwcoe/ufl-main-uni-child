@@ -13,6 +13,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Update with new UF branding fonts
 - Update styles to work better with parent theme update
 - Remove last-modified date from single post templates and archive
+- Remove search from 404 page template
+- Patch mobile nav multi-column styling for short menus in parent theme
+- Remove list bullets where they shouldn't be displayed
 
 1.4.2
 - Switch display property of .dropdown-item to inline-block (because we didn't do that fr in 1.4.1)

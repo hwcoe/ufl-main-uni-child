@@ -36,8 +36,13 @@ Navigation
   .header .dropdown-menu a.active {
     color: var(--bs-dropdown-link-active-color) !important;
   }
+  // override appearance change for main nav dropdowns with few items in mobile view (parent theme patch)
+  #main-nav-ul>li>ul.navbar-one-column.dropdown-menu,
+  #main-nav-ul>li>ul.navbar-two-columns.dropdown-menu {
+    min-width: auto;
+    column-count: auto;
+  }
 }
-
 
 // section navigation
 .page-template-page-section-nav .section-navigation {

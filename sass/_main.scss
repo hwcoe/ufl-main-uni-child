@@ -216,9 +216,9 @@ a:hover, a:focus {
 		padding-left:0;
 		
 	}
-	.wp-block-rss {
+	.dropdown-menu {
 		li::before {
-			// content:"";
+			content:"";
 		}
 	}
 	div.wp-block-rss__item-title {
