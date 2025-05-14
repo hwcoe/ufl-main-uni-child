@@ -173,5 +173,120 @@
 
 <?php get_template_part('template-parts/content', 'offcanvas-search'); ?>
 
+<?php
+$enable_feature = get_option('enable_feature');
+$nav_display = isset($_SESSION['nav_display']) ? $_SESSION['nav_display'] : ''; 
+if($enable_feature == 'yes' && (!isset($_SESSION['nav_display']))){
+	
+?>
+<script>
+jQuery(document).ready(function(){
+	
+    var click_tm = 0;	
+		jQuery('.section-navigation .section-navigation-inner').addClass('menu-active');
+		jQuery('.section-navigation .section-menu-btn').addClass('menu-enabled');
+		jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'none');
+		jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'block');
+		jQuery('.section-navigation .section-menu-btn').click(function(){
+				if(click_tm == 0){
+					jQuery.ajax({
+                type: "POST",
+                url: "<?php echo admin_url('admin-ajax.php'); ?>", // Replace with your server-side script URL
+				data: { action: 'nav_display_action', variableValue: 1 },
+                success: function(response) {
+                    
+                    click_tm = 1;
+					jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
+					jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');
+					jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'block');
+					jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'none');
+					}
+				});
+				}
+				else {
+					if(jQuery(this).hasClass("menu-enabled")) {
+						console.log(jQuery(this).attr('class'));
+								jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'none');
+								jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'block');
+								jQuery('.section-navigation .section-navigation-inner').addClass('menu-active');
+								jQuery('.section-navigation .section-menu-btn').addClass('menu-enabled');
+					}
+					else{
+								jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'none');
+								jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'block');
+								jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
+								jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');
+					}
+				}
+			
+		});
+
+});
+
+</script>
+<?php } elseif (isset($_SESSION['nav_display']) && $_SESSION['nav_display'] == 1 ) { ?>
+	<script>
+	jQuery(document).ready(function(){
+		
+    var session_nav  = <?php echo json_encode($_SESSION['nav_display']); ?>;
+		console.log("Session Value "+session_nav);
+		jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
+		jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');
+		jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'block');
+		jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'none');
+		jQuery('.section-navigation .section-menu-btn').click(function(){
+				
+					if(jQuery(this).hasClass("menu-enabled")) {
+						console.log(jQuery(this).attr('class'));
+								jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'none');
+								jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'block');
+								jQuery('.section-navigation .section-navigation-inner').addClass('menu-active');
+								jQuery('.section-navigation .section-menu-btn').addClass('menu-enabled');
+					}
+					else{
+								jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'none');
+								jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'block');
+								jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
+								jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');
+					}
+			
+		});
+			
+	
+});	
+</script>
+<?php } else{ ?>
+			<script>
+	jQuery(document).ready(function(){
+		
+    var session_nav  = <?php if(isset($_SESSION['nav_display'])) {echo json_encode($_SESSION['nav_display']);} ?>;
+		
+		jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
+		jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');
+		jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'block');
+		jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'none');
+		
+		jQuery('.section-navigation .section-menu-btn').click(function(){
+				
+					if(jQuery(this).hasClass("menu-enabled")) {
+						
+								jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'none');
+								jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'block');
+								jQuery('.section-navigation .section-navigation-inner').addClass('menu-active');
+								jQuery('.section-navigation .section-menu-btn').addClass('menu-enabled');
+					}
+					else{
+								jQuery('.section-navigation .section-menu-btn .close-btn').css('display', 'none');
+								jQuery('.section-navigation .section-menu-btn .open-btn').css('display', 'block');
+								jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
+								jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');
+					}
+			
+		});
+});	
+</script>
+<?php }
+
+?>
 </body>
 </html>
