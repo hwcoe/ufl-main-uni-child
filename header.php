@@ -109,7 +109,6 @@
 			<!-- START MOBILE ONLY SEARCH AND TOGGLE-->
 			<div class="mobile-nav">
 				<div class="mobile-search mobile-only-search">
-					<!-- <button id="search-button" class="search-button" onclick="displaySearchModalChild();"> -->
 					<button id="search-button" class="search-button" onclick="displaySearchModal();">
 					<img class="search-icon" alt="search" src="/wp-content/themes/ufl-main-uni/img/search_icon.png">
 					</button>
@@ -147,7 +146,6 @@
 							}
 					?>
 
-						<!-- <button id="search-button" class="search-button" onclick="displaySearchModalChild();"> -->
 						<button id="search-button" class="search-button" onclick="displaySearchModal();">
 							<img class="search-icon" alt="search" src="/wp-content/themes/ufl-main-uni/img/search_icon.png">
 						</button>
