@@ -25,9 +25,7 @@ get_header();
 			<?php bootscore_category_badge(); ?>
 			<p class="entry-meta">
 				<small class="text-muted">
-					<?php
-						the_time('F j, Y');
-					?>
+					<?php esc_html( the_time('F j, Y') ); ?>
 				</small>
 			</p>
 			<?php the_content(); ?>

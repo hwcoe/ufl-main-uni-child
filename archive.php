@@ -51,10 +51,8 @@ get_header();
                       <!-- Meta -->
                       <?php if ('post' === get_post_type()) : ?>
                         <small class="text-muted mb-2">
-                          <?php
-                          bootscore_date();
-                          bootscore_edit();
-                          ?>
+                          <?php esc_html( the_time('F j, Y') ); ?>
+                          <?php bootscore_edit(); ?>
                         </small>
                       <?php endif; ?>
                       <!-- Excerpt & Read more -->

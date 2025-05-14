@@ -7,7 +7,7 @@
 get_header();  
 ?>
 
-<div id="content" class="site-content container py-5 mt-4">
+<div class="site-content container py-5 mt-4">
 	<div id="primary" class="content-area">
 
 		<!-- Hook to add something nice -->
@@ -25,9 +25,7 @@ get_header();
 						<h1><?php the_title(); ?></h1>
 						<p class="entry-meta">
 							<small class="text-muted">
-								<?php
-									bootscore_date();
-								?>
+								<?php esc_html( the_time('F j, Y') ); ?>
 							</small>
 						</p>
 						<?php 
