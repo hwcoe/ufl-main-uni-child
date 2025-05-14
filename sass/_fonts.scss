@@ -3,19 +3,14 @@ UF Branding Fonts
 ----------------------------*/
 
 @font-face {
-font-family:"quotes-script";
-src:url("https://use.typekit.net/af/4a84c7/000000000000000077558d63/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/4a84c7/000000000000000077558d63/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/4a84c7/000000000000000077558d63/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:swap;font-style:normal;font-weight:400;font-stretch:normal;
+	font-family:"Cinema Script";
+	src:url("https://use.typekit.net/af/3a2947/0000000000000000774ba05a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/3a2947/0000000000000000774ba05a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/3a2947/0000000000000000774ba05a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+	font-display:swap;
+	font-style:normal;
+	font-weight:400;
+	font-stretch:normal;
 }
 
-@font-face {
-font-family:"cinema-script";
-src:url("https://use.typekit.net/af/3a2947/0000000000000000774ba05a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/3a2947/0000000000000000774ba05a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/3a2947/0000000000000000774ba05a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:swap;font-style:normal;font-weight:400;font-stretch:normal;
-}
-.display, .script {
-  // font-family: "quotes-script",sans-serif;
-  font-family: "cinema-script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.script, .display {
+  font-family: var(--display-script), sans-serif;
 }

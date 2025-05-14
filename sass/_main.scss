@@ -28,7 +28,7 @@
 	--book-bold-sans: "IBM Plex bold";
 	--bold-italic-sans: "IBM Plex bold italic";
 	--extrabold-italic-sans: "IBM Plex bold italic";
-	--display-script: "Billion Dreams"
+	--display-script: "Cinema Script"
 }
 body {
 	font-family:var(--book-weight-sans), Arial, sans-serif;
@@ -216,6 +216,14 @@ a:hover, a:focus {
 		padding-left:0;
 		
 	}
+	.wp-block-rss {
+		li::before {
+			// content:"";
+		}
+	}
+	div.wp-block-rss__item-title {
+		display: inline;
+	}
 }
 #sidebar {
 	h2 {
@@ -224,19 +232,21 @@ a:hover, a:focus {
   			line-height: 2.625rem;
 		}
 	}
-	#content{
-		ol, ul {
-			li::before {
-				content:"";
-			}
+	.widget {
+		ul, ol{
+			padding-left:0;
 		}
-	} 
+	}
 }
 .wp-block-latest-posts__featured-image {
 	&.alignleft, &.alignright {
 		margin-bottom:1em;
 	}
 } 
+.blog-post-title {
+	font-size: 2.25rem;
+	line-height: 2.625rem;
+}
 
 // ufl blocks
 .news-landing-header .news-hero-featured,

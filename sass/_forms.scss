@@ -23,3 +23,16 @@ input[type="submit"], input.button,
 		display:none;
 	}	
 }
+#main-content.form-ufl {
+	.field_sublabel_below input+label, .field_sublabel_below select+label,
+	.field_sublabel_below select+button+label, .field_sublabel_below .bootstrap-select+label {
+	    margin-top: 0px;
+	    margin-bottom: 0px;
+	}
+	 input[type=text], input[type=tel], input[type=time], input[type=email], 
+	 input[type=number], select, select+button {
+	 	margin-bottom:8px;
+	 }
+
+}
+
