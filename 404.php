@@ -22,12 +22,7 @@ get_header();
 				<?php endif; ?>
 				<p><a class="button animated-border-button button-border-blue button-text-dark" href="<?php echo esc_url(home_url()); ?>" role="button"><?php esc_html_e('Back Home &raquo;', 'ufl_stamatschild'); ?></a></p>
 			</section>
-			<section class="mb-5">
-				<hr />
-				
-				<!-- <?php get_search_form(); ?> -->
-			</section>
-
+			
 		</main><!-- #main -->
 
 	</div><!-- #primary -->
