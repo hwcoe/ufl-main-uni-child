@@ -7,6 +7,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.4.5
+- Remove list bullets from gravity forms fields that still use legacy markup
+
+1.4.4
+- CSS updates
+	- prevent words from breaking in header tags
+- Limit page options ACF field group to certain page templates
+
 1.4.3
 - Remove WP version info from head and feeds
 - Remove WP version info from enqueued scripts
