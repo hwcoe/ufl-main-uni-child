@@ -23,11 +23,7 @@ get_header();
 
 		<div class="entry-content">
 			<?php bootscore_category_badge(); ?>
-			<p class="entry-meta">
-				<small class="text-muted">
-					<?php esc_html( the_time('F j, Y') ); ?>
-				</small>
-			</p>
+			<?php hwcoe_post_meta(); ?>
 			<?php the_content(); ?>
 		</div>
 	</div>

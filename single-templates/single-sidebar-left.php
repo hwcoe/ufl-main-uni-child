@@ -23,14 +23,10 @@ get_header();
 						<?php the_post(); ?>
 						<?php bootscore_category_badge(); ?>
 						<h1><?php the_title(); ?></h1>
-						<p class="entry-meta">
-							<small class="text-muted">
-								<?php esc_html( the_time('F j, Y') ); ?>
-							</small>
-						</p>
+						<?php hwcoe_post_meta(); ?>
 						<?php 
 							if (!get_field('hide_featured_image')) {
-								bootscore_post_thumbnail();	
+								hwcoe_post_thumbnail();
 							} 
 						?>
 					</header>

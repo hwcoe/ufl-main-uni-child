@@ -256,6 +256,9 @@ a:hover, a:focus {
 	font-size: 2.25rem;
 	line-height: 2.625rem;
 }
+.post-thumbnail .figure-caption {
+	margin-top: -0.75rem;
+}
 
 // ufl blocks
 .news-landing-header .news-hero-featured,
@@ -267,7 +270,6 @@ a:hover, a:focus {
 	background: var(--cool-gray-11);
 	color: #fff;
 	font-size: 16px;
-	// font-family: gentonabookitalic;
 	padding: 1em;
 }
 .visual-navigation {
@@ -311,7 +313,7 @@ a:hover, a:focus {
 	--bs-btn-disabled-border-color: var(--core-blue);
 }
 
-/* category block styling */
+// category block styling
 .wp-block-post-terms {
 	padding: 12px 7%;
 	font-size: 16px;
@@ -336,4 +338,15 @@ a:hover, a:focus {
 	display:none;
 }
 
+// post meta
+.entry-meta {
+	font-size: 1rem;
+	>span:after {
+		content:"/";
+		padding:0 .45em
+	}
+	>span:last-child:after {
+	  display:none
+	}
+}
 

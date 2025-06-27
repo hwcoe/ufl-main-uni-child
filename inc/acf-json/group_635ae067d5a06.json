@@ -1,0 +1,95 @@
+{
+    "key": "group_635ae067d5a06",
+    "title": "Story Options",
+    "fields": [
+        {
+            "key": "field_635ae0680424b",
+            "label": "Byline",
+            "name": "story_byline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "If you wish to display the story author's name, enter it here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 300,
+            "placeholder": "",
+            "prepend": "by",
+            "append": ""
+        },
+        {
+            "key": "field_635ae17a4690b",
+            "label": "Story Source Title",
+            "name": "story_source_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the text you wish to appear denoting the original source of a reposted story (this will be linked with the source URL).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "Story originally published on",
+            "append": ""
+        },
+        {
+            "key": "field_635ae1a94690c",
+            "label": "Story Source URL",
+            "name": "story_source_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Enter the original URL of a reposted story.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_635ae17a4690b",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1751035057
+}
