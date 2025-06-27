@@ -312,7 +312,12 @@ a:hover, a:focus {
 	--bs-btn-disabled-color: var(--core-blue);
 	--bs-btn-disabled-border-color: var(--core-blue);
 }
+.wp-block-file__button {
+	&:hover, &:active, &:focus {
+		background: var( --bs-gray-200);
+	}
 
+}
 // category block styling
 .wp-block-post-terms {
 	padding: 12px 7%;

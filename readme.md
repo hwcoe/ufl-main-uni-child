@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - CSS updates
 	- Prevent words from breaking in header tags
 	- Remove list bullets from gravity forms fields that still use legacy markup
+	- Change hover/active background for .wp-block-file__button to improve contrast and readability
 - Limit page options ACF field group to certain page templates
 - Display featured image captions in No Sidebar and Sidebar Left post templates
 - Add story options fields from newengineer theme (byline and original source)
