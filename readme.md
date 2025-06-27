@@ -14,7 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Change hover/active background for .wp-block-file__button to improve contrast and readability
 - Limit page options ACF field group to certain page templates
 - Display featured image captions in No Sidebar and Sidebar Left post templates
-- Add story options fields from newengineer theme (byline and original source)
+- Add story options fields from newengineer theme (byline and original source) to non-default post templates
+- Update dependencies
 
 1.4.3
 - Remove WP version info from head and feeds
