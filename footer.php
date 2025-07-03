@@ -259,7 +259,7 @@ jQuery(document).ready(function(){
 			<script>
 	jQuery(document).ready(function(){
 		
-    var session_nav  = <?php if(isset($_SESSION['nav_display'])) {echo json_encode($_SESSION['nav_display']);} ?>;
+    // var session_nav  = <?php if(isset($_SESSION['nav_display'])) {echo json_encode($_SESSION['nav_display']);} ?>;
 		
 		jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
 		jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');
