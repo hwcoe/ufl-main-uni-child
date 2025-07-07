@@ -7,6 +7,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.4.5 (in progress)
+- CSS updates
+	- Ordered list display bug fix (TODO)
+- Syntax error fix: comment out session_nav variable declaration where condition does not exist
+- Add share icons to post templates
+
 1.4.4
 - CSS updates
 	- Prevent words from breaking in header tags

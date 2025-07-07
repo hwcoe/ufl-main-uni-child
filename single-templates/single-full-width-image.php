@@ -29,8 +29,14 @@ get_header();
 	</div>
 
 	<footer class="entry-footer clear-both mt-5 mb-5 container">
-		<div class="mb-5 mt-3">
+
+		<div class="date-share-wrapper">
 			<?php bootscore_tags(); ?>
+			<div class="single-social-share">
+				<div class="col-12 social-column social-column-grey">
+					 <div class="sharethis-inline-share-buttons"></div>
+				</div>
+			</div>
 		</div>
 		<nav aria-label="bS page navigation">
 			<ul class="pagination justify-content-center">
