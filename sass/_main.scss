@@ -225,6 +225,11 @@ a:hover, a:focus {
 		padding-left:0;
 		
 	}
+	ol {
+		li::before {
+	    	display: inline;
+	    }
+	}
 	.dropdown-menu, .gform_fields {
 		li::before {
 			content:"";

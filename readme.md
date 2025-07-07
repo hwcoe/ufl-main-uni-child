@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 1.4.5 (in progress)
 - CSS updates
-	- Ordered list display bug fix (TODO)
+	- Ordered list numbering display bug fix
 - Syntax error fix: comment out session_nav variable declaration where condition does not exist
 - Add share icons to post templates
 
