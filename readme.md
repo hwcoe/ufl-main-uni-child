@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - CSS updates
 	- Ordered list numbering display bug fix
 	- Add .intro style to #content rather than just fullwidth text block
+	- Adjust h3 font size in fullwidth-text-block
 - Syntax error fix: comment out session_nav variable declaration where condition does not exist
 - Add share icons to post templates
 
