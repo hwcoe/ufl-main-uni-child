@@ -70,36 +70,55 @@
 			<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
 			<!-- START LOGO COL-->
 			<div class="col-sm-8 col-md-6 col-logo">
-
-			<?php if ( get_theme_mod( 'display_header_content', false ) && !$second_featured_image )  {
+			<?php
+				$display_alternate_logo = get_theme_mod( 'display_header_content' );
 				$alternate_logo = get_theme_mod( 'alternate_logo' );
 				$alternate_logo_text = get_theme_mod( 'alternate_logo_text' );
 				$alternate_logo_url = wp_get_attachment_image_url( $alternate_logo ) ? wp_get_attachment_image_url( $alternate_logo, 'full' ) : get_stylesheet_directory_uri() . '/img/UF_Monogram_Orange.png';
-				?>
-				<!-- Display content when the checkbox is checked -->
+			?>
+
+			<?php 
+				// Display Alternate Logo is enabled in Customizer, no Alternate Logo uploaded on individual page
+				if ( $display_alternate_logo && !$second_featured_image )  { 
+			?>
 				<a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
-				<span class="alt-logo">
-					<img src="<?= $alternate_logo_url; ?>" alt="Logo" title="school-logo" />
-					<span class="visually-hidden">School Logo Link</span>
-				</span>
-				<span class="alt-logo-txt">
-					<?php echo $alternate_logo_text; ?>
-				</span>
+					<span class="alt-logo">
+						<img src="<?= $alternate_logo_url; ?>" alt="Logo" title="school-logo" />
+						<span class="visually-hidden">School Logo Link</span>
+					</span>
+					<span class="alt-logo-txt">
+						<?php echo $alternate_logo_text; ?>
+					</span>
 				</a>
 			<?php }  
-		elseif ($second_featured_image || get_theme_mod( 'display_header_content', false ) ) { ?>
-		<a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
-			<span class="alt-logo">
-				<img src="<?= $second_featured_image ?>" alt="Logo" title="logo" />
+
+			// if Display Alternate Logo is enabled in Customizer or an Alternate Logo uploaded on individual page
+			elseif ($second_featured_image || $display_alternate_logo ) { ?>
+			<a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
+				<span class="alt-logo">
+					<img src="<?= $second_featured_image ?>" alt="Logo" title="logo" />
+					</span>
+				<span class="alt-logo-txt">
+					<?= $custom_text; ?>
 				</span>
-			<span class="alt-logo-txt">
-				<?= $custom_text; ?>
-			</span>
-		</a>
-	<?php } else {
+			</a>
+	<?php } 
+		// custom logo is uploaded
+		elseif ( has_custom_logo() ) {
 		the_custom_logo();
-		echo '<span class="visually-hidden">School Logo Link</span>';
-	} ?>
+		echo '<span class="visually-hidden">' . get_bloginfo ( 'name' ) . '</span>';
+		} 
+		// No logo uploaded, Display alternate logo is not enabled 
+		else { ?>
+			<a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
+				<span class="alt-logo">
+					<img src="<?= $alternate_logo_url; ?>" alt="Logo" title="school-logo" />
+				</span>
+				<span class="alt-logo-txt">
+					<?php echo get_bloginfo( 'name' ); ?>
+				</span>
+			</a>
+		<?php } ?>
 </div>
 				 
 

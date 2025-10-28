@@ -15,6 +15,10 @@
  $post_id = get_queried_object_id();
  $second_featured_image = get_post_meta($post_id, 'second_featured_image', true);
  $custom_text = get_post_meta($post_id, 'custom_text', true);
+ $display_alternate_logo = get_theme_mod( 'display_header_content' );
+ $alternate_logo = get_theme_mod( 'alternate_logo' );
+ $alternate_logo_text = get_theme_mod( 'alternate_logo_text' );
+ $alternate_logo_url = wp_get_attachment_image_url( $alternate_logo ) ? wp_get_attachment_image_url( $alternate_logo, 'full' ) : get_stylesheet_directory_uri() . '/img/UF_Monogram_Orange.png';
 ?>
 <!-- START FOOTER WRAPPER -->
 <div class="footer-wrapper position-relative">
@@ -33,6 +37,7 @@
 
 						<?php     
 							$footer_image_id = get_theme_mod( 'footer_image' );
+							// footer image has been uploaded in Customizer
 							if ( $footer_image_id ) {
 						?>
 							<a class="navbar-brand" href="<?= home_url(); ?>" alt="Home">
@@ -41,10 +46,8 @@
 								</span>
 							</a>
 						<?php } 
-							elseif ( get_theme_mod( 'display_header_content', false ) && !$second_featured_image )  {
-								$alternate_logo = get_theme_mod( 'alternate_logo' );
-								$alternate_logo_text = get_theme_mod( 'alternate_logo_text' );
-								$alternate_logo_url = wp_get_attachment_image_url( $alternate_logo ) ? wp_get_attachment_image_url( $alternate_logo, 'full' ) : get_stylesheet_directory_uri() . '/img/UF_Monogram_Orange.png';
+							// Display Alternate Logo is enabled in Customizer, no Alternate Logo uploaded on individual page
+							elseif ( $display_alternate_logo && !$second_featured_image )  {
 								?>
 							<!-- Display content when the checkbox is checked -->
 							<a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
@@ -57,24 +60,33 @@
 								</span>
 							</a>
 						<?php }  
-							elseif ($second_featured_image || get_theme_mod( 'display_header_content', false ) ) { ?>
+						// if Display Alternate Logo is enabled in Customizer or an Alternate Logo uploaded on individual page
+							elseif ($second_featured_image || $display_alternate_logo ) { ?>
 							<a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
 								<span class="alt-logo">
-											<img src="<?= $second_featured_image ?>" alt="Logo" title="logo" />
-											</span>
-										<span class="alt-logo-txt">
-											<?= $custom_text; ?>
-									</span>
-							</a>
-						<?php } else { ?>
-							<a class="navbar-brand" href="<?= home_url(); ?>" alt="Home">
-							<span><?php     
-									the_custom_logo();
-									echo '<span class="visually-hidden">School Logo Link</span>';
-									?>
-									
+									<img src="<?= $second_featured_image ?>" alt="Logo" title="logo" />
+								</span>
+								<span class="alt-logo-txt">
+									<?= $custom_text; ?>
 								</span>
 							</a>
+						<?php } 
+						// custom logo is uploaded
+						elseif ( has_custom_logo() ) {
+							the_custom_logo();
+							echo '<span class="visually-hidden">' . get_bloginfo ( 'name' ) . '</span>';
+						} 
+						// No logo uploaded, Display alternate logo is not enabled 
+						else { ?>
+							<a class="navbar-brand navbar-brand-alternate" href="<?= home_url(); ?>" tabindex="0" alt="Home">
+								<span class="alt-logo">
+									<img src="<?= $alternate_logo_url; ?>" alt="Logo" title="school-logo" />
+								</span>
+								<span class="alt-logo-txt">
+									<?php echo get_bloginfo( 'name' ); ?>
+								</span>
+							</a>
+
 						<?php } ?>
 					</div>
 					<div class="col-12 col-md-6 footer-col-social">
