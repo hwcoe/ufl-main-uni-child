@@ -90,13 +90,38 @@ $id = rand(); // not related to searches, so we'll just add an ID for good pract
 						<div class="input">
 						<?php if(get_option('dbem_attributes_enabled')) { em_locate_template('forms/event/attributes-public.php',true); }  ?>
 						<?php if(get_option('dbem_categories_enabled')) { em_locate_template('forms/event/categories-public.php',true); }  ?>
+						<?php if(get_option('dbem_tags_enabled')):  ?>
+							<div class="event-categories">
+								<label for="event_tags[]"><?php _e ( 'Tag:', 'events-manager'); ?></label>
+ 								<select name="event_tags[]" class="em-selectize selectized" multiple="multiple" size="10" tabindex="-1" style="display: none;">
+								<?php
+									$tags = get_terms(array(
+							    		'taxonomy' => 'event-tags',
+							    		'hide_empty' => false,
+									));	    
+									if ($tags) {
+										foreach ($tags as $tag) {
+											echo '<option value="' . $tag->term_id . '">' . $tag->name .'</option>';
+										}
+									} 
+								?>
+								</select>
+								
+							</div>
+
+						<?php endif; ?>
 						</div>
 					</div>
 			</section>
 
-			<?php 
-			// Template customization - removed image upload
-			?>
+			<section class="event-form-image  <?php echo $template; ?>">
+				<?php if( $EM_Event->can_manage('upload_event_images','upload_event_images') ): ?>
+				<h3><?php esc_html_e( 'Event Image', 'events-manager'); ?></h3>
+				<div class="input">
+					<?php em_locate_template('forms/event/featured-image-public.php',true); ?>
+				</div>
+				<?php endif; ?>
+			</section>
 
 			<?php if( get_option('dbem_rsvp_enabled') && $EM_Event->can_manage('manage_bookings','manage_others_bookings') ) : ?>
 			<section class="event-form-bookings <?php echo $template; ?>">
