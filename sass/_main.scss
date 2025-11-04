@@ -185,18 +185,11 @@ p {
 		line-height: 5.5rem;
 	}
 }
-.entry-content a {
+.entry-content a, .fullwidth-text-block a {
 	font-family: var(--medium-weight-sans), Arial, sans-serif;
-	color: #0021a5;
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-		color: #000;
-	}
+	text-decoration: underline;
 }
-.fullwidth-text-block, .entry-content {
+.entry-content a, .fullwidth-text-block a {
 	.wp-block-button a, a.button {
 		&:hover,
 		&:focus {
