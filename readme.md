@@ -17,7 +17,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Add share icons to post templates
 - Display site name in header and footer if no logo is uploaded and alternate logo text is disabled
 - Accessibility: add text-decoration to text links in .entry-content and .fullwidth-text-block
-- Accessibility: override WP Fullcalendar hard coding of "More events" background color to meet color contrast requirement
+- Accessibility: Override WP Fullcalendar hard coding of "More events" background color to meet color contrast requirement
+- Accessibility: Increase line-height for events in FullCalendar
 
 1.4.4
 - CSS updates
