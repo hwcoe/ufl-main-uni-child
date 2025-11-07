@@ -232,20 +232,20 @@ a:hover, a:focus {
 		display: inline;
 	}
 
-    p.intro {
-      display: block;
-      font-size: 22px;
-      line-height: 32px;
-      color: #343741;
-      font-family: "IBM Plex medium";
-      margin-bottom: 20px;
+  p.intro {
+    display: block;
+    font-size: 22px;
+    line-height: 32px;
+    color: #343741;
+    font-family: "IBM Plex medium";
+    margin-bottom: 20px;
 
-      @media (min-width: 800px) {
-        margin-bottom: 40px;
-        font-size: 26px;
-        line-height: 38px;
-      }
+    @media (min-width: 800px) {
+      margin-bottom: 40px;
+      font-size: 26px;
+      line-height: 38px;
     }
+  }
 }
 #sidebar {
 	h2 {

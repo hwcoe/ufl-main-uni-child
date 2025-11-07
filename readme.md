@@ -13,11 +13,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Add .intro style to #content rather than just fullwidth text block
 	- Adjust h3 font size in fullwidth-text-block
 	- Add fix for main nav dropdown menus in safari (will be applied in parent theme update, per UF web svcs)
-	- TODO reduce whitespace above/below the following blocks as needed: accordion, 
 - Syntax error fix: comment out session_nav variable declaration where condition does not exist
 - Add share icons to post templates
 - Display site name in header and footer if no logo is uploaded and alternate logo text is disabled
 - Accessibility: add text-decoration to text links in .entry-content and .fullwidth-text-block
+- Accessibility: override WP Fullcalendar hard coding of "More events" background color to meet color contrast requirement
 
 1.4.4
 - CSS updates
