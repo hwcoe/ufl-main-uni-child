@@ -223,7 +223,7 @@ a:hover, a:focus {
 	    	display: inline;
 	    }
 	}
-	.dropdown-menu, .gform_fields {
+	.dropdown-menu, .gform_fields, .wp-block-query, .wp-block-latest-posts {
 		li::before {
 			content:"";
 		}
