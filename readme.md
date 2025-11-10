@@ -19,6 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Accessibility: add text-decoration to text links in .entry-content and .fullwidth-text-block
 - Accessibility: Override WP Fullcalendar hard coding of "More events" background color to meet color contrast requirement
 - Accessibility: Increase line-height for events in FullCalendar
+- Change posts_per_page parameter to 10 (WordPress default) to avoid issue with repeating posts in post display
 
 1.4.4
 - CSS updates

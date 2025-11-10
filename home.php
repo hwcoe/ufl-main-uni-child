@@ -83,7 +83,7 @@ $postid = get_option('page_for_posts');
     <div id="misha_posts_wrap" class="row position-relative news-row" data-masonry="{&quot;percentPosition&quot;: true }">
       <?php
       $params = [
-        "posts_per_page" => 15,
+        "posts_per_page" => 10,
       ];
 
       query_posts($params);
