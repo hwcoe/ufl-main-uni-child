@@ -7,19 +7,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
-1.4.5 (in progress)
+1.4.5
 - CSS updates
 	- Ordered list numbering display bug fix
 	- Add .intro style to #content rather than just fullwidth text block
 	- Adjust h3 font size in fullwidth-text-block
 	- Add fix for main nav dropdown menus in safari (will be applied in parent theme update, per UF web svcs)
 	- Remove ul list bullets for query loop and latest posts blocks
+	- Accessibility: Increase line-height for events in FullCalendar
+	- Accessibility: add text-decoration to text links in .entry-content and .fullwidth-text-block
+	- Accessibility: Add !important to .wp-block-file__button to improve contrast and readability
 - Syntax error fix: comment out session_nav variable declaration where condition does not exist
 - Add share icons to post templates
 - Display site name in header and footer if no logo is uploaded and alternate logo text is disabled
-- Accessibility: add text-decoration to text links in .entry-content and .fullwidth-text-block
 - Accessibility: Override WP Fullcalendar hard coding of "More events" background color to meet color contrast requirement
-- Accessibility: Increase line-height for events in FullCalendar
 - Change posts_per_page parameter to 10 (WordPress default) to avoid issue with repeating posts in post display
 
 1.4.4

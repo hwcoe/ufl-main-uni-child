@@ -332,8 +332,10 @@ a:hover, a:focus {
 	--bs-btn-disabled-border-color: var(--core-blue);
 }
 .wp-block-file__button {
+	color: #fff !important;
 	&:hover, &:active, &:focus {
 		background: var( --bs-gray-200);
+		color: #000 !important;
 	}
 
 }
