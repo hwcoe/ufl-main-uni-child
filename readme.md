@@ -8,6 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ## Changelog
 
 1.4.6 (in progress)
+- Allow selection of tags in event submission form
 - TODO Add share icons to post templates (for real this time)
 - CSS updates
 	- TODO Accessibility: add text-decoration to text links in ufl blocks: accordion, cards right rail,
