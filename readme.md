@@ -8,6 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ## Changelog
 
 1.4.6 (in progress)
+- Reconcile event submission form with plugin update
 - Allow selection of tags in event submission form
 - TODO Add share icons to post templates (for real this time)
 - CSS updates
