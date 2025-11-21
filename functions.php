@@ -198,3 +198,41 @@ function complete_version_removal() {
     return '';
 }
 add_filter('the_generator', 'complete_version_removal');
+
+/**
+ * Saves the custom 'event-tags' submitted from the front-end event form.
+ *
+ * This function now correctly saves terms to the 'event-tags' taxonomy.
+ *
+ * @param bool $result The result of the save action so far.
+ * @param EM_Event $EM_Event The event object that was just saved.
+ * @return bool The result of the save action.
+ */
+
+function my_em_save_event_tags($result, $EM_Event) {
+    if (!$result) {
+        return false;
+    }
+
+    // Check if the save action is coming from the front-end form. The EM form includes a hidden field named 'action' with the value 'event_save'.
+    if (isset($_POST['action']) && $_POST['action'] === 'event_save') {
+
+        // Check if tags field contains data
+        if (isset($_POST['event_tags']) && is_array($_POST['event_tags'])) {
+ 	        // Sanitize the input to ensure all values are integers (term IDs)
+            $tag_ids = array_map('intval', $_POST['event_tags']);
+            // Replace existing event tags with the new selection.
+            wp_set_post_terms($EM_Event->post_id, $tag_ids, 'event-tags', false);
+        } else {
+            // If our form was submitted but NO tags were selected, clear all tags.
+            wp_set_post_terms($EM_Event->post_id, array(), 'event-tags', false);
+        }
+    }
+
+    // If the save is not from our front-end form, we do nothing and the existing tags are retained.
+    return $result;
+}
+// It's good practice to remove the old action before adding the new one
+// remove_action('em_event_save', 'my_em_save_event_tags', 10, 2);
+add_action('em_event_save', 'my_em_save_event_tags', 10, 2);
+

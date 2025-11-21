@@ -95,8 +95,8 @@ $id = rand(); // not related to searches, so we'll just add an ID for good pract
 					<?php if(em_get_option('dbem_categories_enabled')) { em_locate_template('forms/event/categories-public.php',true); }  ?>
 					<?php if(em_get_option('dbem_tags_enabled')):  ?>
 						<div class="event-tags">
-							<label for="event_tags[]"><?php _e ( 'Tag', 'events-manager'); ?></label>
- 							<select name="event_tags[]" class="em-selectize selectized" multiple="multiple" size="10" tabindex="-1" style="display: none;">
+							<label for="event_tags[]"><?php _e ( 'Tag:', 'events-manager'); ?></label>
+ 							<select name="event_tags[]" class="em-selectize selectized" multiple="multiple" size="10" tabindex="-1">
 							<?php
 								$tags = get_terms(array(
 						    		'taxonomy' => 'event-tags',
