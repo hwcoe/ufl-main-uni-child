@@ -55,6 +55,12 @@ function ufl_uni_child_enqueue_scripts() {
 	  wp_enqueue_script('child-custom', get_stylesheet_directory_uri() . '/js/custom.js', false, true, true);
 }
 
+ function ww_load_dashicons(){
+     wp_enqueue_style('dashicons');
+ }
+ add_action('wp_enqueue_scripts', 'ww_load_dashicons');
+
+
 add_action( 'after_setup_theme', 'ufl_uni_child_remove_parent_scripts' );
 function ufl_uni_child_remove_parent_scripts() {
 	remove_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
