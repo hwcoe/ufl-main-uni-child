@@ -185,7 +185,7 @@ p {
 		line-height: 5.5rem;
 	}
 }
-.entry-content a, .fullwidth-text-block a {
+.entry-content a, .fullwidth-text-block a, .single-news-body-content a {
 	font-family: var(--medium-weight-sans), Arial, sans-serif;
 	text-decoration: underline;
 }
@@ -228,6 +228,11 @@ a:hover, a:focus {
 			content:"";
 		}
 	}
+	.wp-block-latest-posts__featured-image {
+	&.alignleft, &.alignright {
+		margin-bottom:1em;
+	}
+} 
 	div.wp-block-rss__item-title {
 		display: inline;
 	}
@@ -260,17 +265,21 @@ a:hover, a:focus {
 		}
 	}
 }
-.wp-block-latest-posts__featured-image {
-	&.alignleft, &.alignright {
-		margin-bottom:1em;
-	}
-} 
+
 .blog-post-title {
 	font-size: 2.25rem;
 	line-height: 2.625rem;
 }
 .post-thumbnail .figure-caption {
 	margin-top: -0.75rem;
+}
+
+// social shares in stories
+#st-1 .st-btn[data-network="linkedin"] {
+	display:inline-block !important;
+}
+footer .date-share-wrapper {
+	padding: 20px 0;
 }
 
 // ufl blocks
@@ -314,6 +323,15 @@ a:hover, a:focus {
 		font-family: var(--book-weight-sans), Arial, sans-serif;
 	}
 
+}
+// make sure links within ufl blocks are underlined for accessibility
+.accordion .accordion-item .accordion-body .accordion-body-wrap a,
+.card-right-rail-section .container a {
+	text-decoration:underline;
+
+	&:hover, &:focus {
+		text-decoration:none;
+	}
 }
 
 // buttons

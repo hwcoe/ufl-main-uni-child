@@ -11,9 +11,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Reconcile event submission form with plugin update
 - Allow selection of tags in event submission form
 - Remove event booking form customizations, as booking is no longer used
-- TODO Add share icons to post templates (for real this time)
+- Add share icons to post templates (for real this time)
+- Add Dashicons on front end for non logged in users
+- TODO add font-awesome icons??
 - CSS updates
-	- TODO Accessibility: add text-decoration to text links in ufl blocks: accordion, cards right rail,
+	- Adjust styling for share icons in stories to force LinkedIn share icon display 
+	- Accessibility: add text-decoration to text links in ufl blocks: accordion, cards right rail
 
 1.4.5
 - CSS updates
