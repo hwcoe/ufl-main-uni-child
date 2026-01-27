@@ -17,6 +17,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - CSS updates
 	- Adjust styling for share icons in stories to force LinkedIn share icon display 
 	- Accessibility: add text-decoration to text links in ufl blocks: accordion, cards right rail
+	- Adjust color contrast in forms text
 
 1.4.5
 - CSS updates

@@ -36,3 +36,7 @@ input[type="submit"], input.button,
 
 }
 
+#main .gform_wrapper .gfield_required, 
+#main-content.form-ufl .gfield_required {
+	color: var(--core-blue);
+}
