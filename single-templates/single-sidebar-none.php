@@ -10,7 +10,14 @@ get_header();
 <main id="main" class="site-main container py-5 mt-4">
 	<header class="entry-header">
 		<?php the_post(); ?>
-		<?php bootscore_category_badge(); ?>
+		<div class="date-share-wrapper">		
+			<?php bootscore_category_badge(); ?>
+			<div class="single-social-share">
+				<div class="col-12 social-column social-column-grey">
+					<div class="sharethis-inline-share-buttons"></div>
+				</div>
+			</div>
+		</div>
 		<h1><?php the_title(); ?></h1>
 		<?php hwcoe_post_meta(); ?>
 		<?php 
@@ -29,15 +36,7 @@ get_header();
 		</div>
 	</div>
 	<footer class="entry-footer clear-both mt-5 mb-5 container">
-		
-		<div class="date-share-wrapper">
-			<?php bootscore_tags(); ?>
-			<div class="single-social-share">
-				<div class="col-12 social-column social-column-grey">
-					 <div class="sharethis-inline-share-buttons"></div>
-				</div>
-			</div>
-		</div>
+		<?php bootscore_tags(); ?>
 		
 		<nav aria-label="bS page navigation">
 			<ul class="pagination justify-content-center">

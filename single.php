@@ -10,6 +10,8 @@ get_header();
 	<!-- Hook to add something nice -->
 	<?php bs_after_primary(); ?>
 	<?php the_content(); ?>
+	
+	<?php bootscore_tags(); ?>
 	<div class="mobile-related single-news-related-content"></div>
 </div>
 <footer class="entry-footer mt-5 mb-5 container clear-both site-content">

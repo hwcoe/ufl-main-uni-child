@@ -22,22 +22,23 @@ get_header();
 		<?php bs_after_primary(); ?>
 
 		<div class="entry-content">
-			<?php bootscore_category_badge(); ?>
+			<div class="date-share-wrapper">
+				<?php bootscore_category_badge(); ?>
+			
+				<div class="single-social-share">
+					<div class="col-12 social-column social-column-grey">
+						<div class="sharethis-inline-share-buttons"></div>
+					</div>
+				</div>
+			</div>
+
 			<?php hwcoe_post_meta(); ?>
 			<?php the_content(); ?>
 		</div>
 	</div>
 
 	<footer class="entry-footer clear-both mt-5 mb-5 container">
-
-		<div class="date-share-wrapper">
-			<?php bootscore_tags(); ?>
-			<div class="single-social-share">
-				<div class="col-12 social-column social-column-grey">
-					 <div class="sharethis-inline-share-buttons"></div>
-				</div>
-			</div>
-		</div>
+		<?php bootscore_tags(); ?>
 		<nav aria-label="bS page navigation">
 			<ul class="pagination justify-content-center">
 				<li class="page-item">

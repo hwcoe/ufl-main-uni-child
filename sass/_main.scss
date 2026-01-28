@@ -273,15 +273,35 @@ a:hover, a:focus {
 .post-thumbnail .figure-caption {
 	margin-top: -0.75rem;
 }
+footer .tags-links {
+	padding-bottom:36px;
+}
+.single-news .tags-links {
+  padding: 3% 7%;
+  max-width: calc(14% + 1074px);
+  margin-right: auto;
+  margin-left: auto;
+}
 
 // social shares in stories
-#st-1 .st-btn[data-network="linkedin"] {
+#st-1 .st-btn {
 	display:inline-block !important;
 }
-footer .date-share-wrapper {
-	padding: 20px 0;
+// date-share-wrapper in custom post templates
+.single-social-share {
+	white-space:nowrap;
+} 
+main .single-news .date-share-wrapper, .date-share-wrapper 
+{
+	padding-left:0;
+	padding-right: 0;
+	max-width:100%;
+	@media only screen and (min-width: 1555px) {
+		.single-social-share {
+			margin-right:0;
+		}
+	}
 }
-
 // ufl blocks
 .news-landing-header .news-hero-featured,
 .cta-button-wrapper .cta-button .cta-title,
