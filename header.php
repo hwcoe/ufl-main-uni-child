@@ -63,13 +63,16 @@
 		<div class="gcse-search" enableOrderBy="true" data-as_sitesearch="<?php echo esc_url( get_site_url() ); ?>"></div>
 		<button id="close-search-button" class="close-search" onclick="hideSearchModal();"><img class="search-icon" alt="close search" src="/wp-content/themes/ufl-main-uni/img/x.PNG"></button>
 	</div>
+
 	<header id="masthead" class="header header-wrapper fixed-header w-100">
 	<!-- START FULL WIDTH TOP NAV CONTAINER (LOGO + TOP NAV)-->
+	
 	<div class="container-fluid header-container">
 		<div class="row justify-content-between header-row">
 			<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
 			<!-- START LOGO COL-->
 			<div class="col-sm-8 col-md-6 col-logo">
+			
 			<?php
 				$display_alternate_logo = get_theme_mod( 'display_header_content' );
 				$alternate_logo = get_theme_mod( 'alternate_logo' );
@@ -169,6 +172,7 @@
 							<img class="search-icon" alt="search" src="/wp-content/themes/ufl-main-uni/img/search_icon.png">
 						</button>
 					</div>
+
 					<?php if (has_nav_menu('information-menu') ) { ?>
 					<div class="dropdown">
 						<div class="dropdown-hover position-relative">
@@ -211,6 +215,54 @@
 						</div>
 					</div>
 					<?php } ?>
+
+					<!--ReciteMe Button Top Navbar-->
+					<?php
+                    $add_classes = '';
+                    if (get_theme_mod('navbar_recite_me_button', false)) {
+                    $add_classes .= ' shadow showNavReciteMebtn';
+                    }
+                    ?>
+
+                <button aria-label="Launch Recite Me assistive technology" class="reciteMe-btn-default<?php echo $add_classes; ?>" role="button" id="enableRecite2"><span class="acc-icon-top"></span>
+        </button>
+                    <script>
+        
+                    document.getElementById('enableRecite2').addEventListener("click", function() {
+                    if (typeof loadService !== 'undefined' && typeof loadService === 'function') {
+                            loadService();
+                    } else {
+                        console.warn('Recite Me is not ready yet.');
+                    } 
+                    
+
+                    });
+                    </script>
+                    <script>
+                        const reciteMeNavChangeMobile = () => {
+                            const widthOfBody = window.innerWidth;
+                            const reciteMeNavButton = document.querySelector(".reciteMe-btn-default");
+                            const reciteMeFloatButton = document.querySelector(".reciteMe-btn-blue");
+                            
+                            const navButtonClasses = reciteMeNavButton.getAttribute("class");
+                            const showReciteMeNavBtn = navButtonClasses && navButtonClasses.includes("shadow");
+                            
+
+                            if(showReciteMeNavBtn === true) {
+                               if(widthOfBody <= 1409) {
+                                    reciteMeNavButton.classList.remove("showNavReciteMebtn");
+                                    reciteMeFloatButton.classList.add( "showFloatReciteMebtn");
+                               } else if (widthOfBody > 1409){
+                                reciteMeNavButton.classList.add("showNavReciteMebtn");
+                                reciteMeFloatButton.classList.remove("showFloatReciteMebtn");
+                              }
+                            } 
+
+                        }
+                            
+                        document.addEventListener("DOMContentLoaded", reciteMeNavChangeMobile);
+                        window.addEventListener("resize", reciteMeNavChangeMobile);
+                    </script>
 				</div>
 			</div>
 			<!-- END DESKTOP ONLY TOP MENU ITEMS & DROPDOWNS-->
