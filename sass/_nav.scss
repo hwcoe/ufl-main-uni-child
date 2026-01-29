@@ -49,6 +49,14 @@ Navigation
 	top:120px;
 }
 
+// alt text/empty alt attribute for decorative images
+.section-navigation .section-navigation-inner .section-navigation-toggler .open-btn::before {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="7.464" height="15.64" viewBox="0 0 7.464 15.64"><path id="Path_13869" data-name="Path 13869" d="M0,5.917,7.35,0,14.7,5.917" transform="translate(6.501 0.47) rotate(90)" fill="none" stroke="%23000" stroke-width="1.5"/></svg>') / 'Open';
+}
+.section-navigation .section-navigation-inner .section-navigation-toggler .close-btn::before {
+  content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="13.717" height="13.719" viewBox="0 0 13.717 13.719"><g id="section-nav-close" transform="translate(-547.969 -750.969)"><path id="Path_13736" data-name="Path 13736" d="M-13953.17-19808.256l-12.656,12.656" transform="translate(14514.325 20559.756)" fill="none" stroke="%23000" stroke-width="1.5"/><path id="Path_13737" data-name="Path 13737" d="M-13965.826-19808.256l12.656,12.656" transform="translate(14514.325 20559.756)" fill="none" stroke="%23000" stroke-width="1.5"/></g></svg>') / '';
+}
+
 // fix for safari
 @media (min-width: 1410px) {
     .header #main-nav-ul .dropdown-menu li{

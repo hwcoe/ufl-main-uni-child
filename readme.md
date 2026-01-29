@@ -14,10 +14,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Add share icons to post templates (for real this time) and move to top
 - Add Dashicons on front end for non logged in users
 - TODO add font-awesome icons??
-- CSS updates
+- Accessibility updates
 	- Adjust styling for share icons in stories to force LinkedIn share icon display 
 	- Accessibility: add text-decoration to text links in ufl blocks: accordion, cards right rail
 	- Adjust color contrast in forms text
+	- Alt text/empty alt attribute for decorative images in section nav
+	- TODO accessible "read more" links and buttons
+		- post category and archive template
+		- Carousel, Stack carousel, Hero, cards (text+image), showcase text image
 
 1.4.5
 - CSS updates
