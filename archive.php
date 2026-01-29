@@ -57,7 +57,10 @@ get_header();
                       <?php endif; ?>
                       <!-- Excerpt & Read more -->
                       <div class="card-text mt-auto">
-                        <?php the_excerpt(); ?> <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'ufl_stamats'); ?></a>
+
+                        <?php the_excerpt(); ?> 
+                        <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ufl_stamats'); ?><span class="visually-hidden">: <?php the_title() ?></span> »</a>
+
                       </div>
                       <!-- Tags -->
                       <?php bootscore_tags(); ?>
