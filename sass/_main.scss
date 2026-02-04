@@ -212,9 +212,7 @@ a:hover, a:focus {
 #content {
 	ul {
 		list-style:none;
-		li {
-			// line-height:0;
-		}
+	
 		li::before {
 			content:"";
 			display:block;
@@ -239,9 +237,6 @@ a:hover, a:focus {
 		display: inline;
 	}
 	ul.wp-block-list {
-		li {
-			// line-height: 24px;
-		}
 		li::before {
 			content: "■";
 			display: inline-block;
@@ -319,7 +314,6 @@ main .single-news .date-share-wrapper, .date-share-wrapper
 }
 // ufl and other blocks
 .wp-block-social-links .wp-block-social-link.wp-social-link {
-	line-height: 0 !important;
 	padding-left:0 !important;
 }
 .news-landing-header .news-hero-featured,
