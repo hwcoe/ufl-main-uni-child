@@ -212,22 +212,24 @@ a:hover, a:focus {
 #content {
 	ul {
 		list-style:none;
+		li {
+			// line-height:0;
+		}
+		li::before {
+			content:"";
+			display:block;
+		}
 	}
 	ul.wp-block-latest-posts,
 	ul.wp-block-post-template {
 		padding-left:0;
 		
 	}
-	ol {
-		li::before {
-	    	display: inline;
-	    }
-	}
-	.dropdown-menu, .gform_fields, .wp-block-query, .wp-block-latest-posts {
-		li::before {
-			content:"";
-		}
-	}
+	// .dropdown-menu, .gform_fields, .wp-block-query, .wp-block-latest-posts {
+	// 	li::before {
+	// 		content:"";
+	// 	}
+	// }
 	.wp-block-latest-posts__featured-image {
 	&.alignleft, &.alignright {
 		margin-bottom:1em;
@@ -236,7 +238,20 @@ a:hover, a:focus {
 	div.wp-block-rss__item-title {
 		display: inline;
 	}
-
+	ul.wp-block-list {
+		li {
+			// line-height: 24px;
+		}
+		li::before {
+			content: "■";
+			display: inline-block;
+		}
+	}
+	ol {
+		li::before {
+	    	display: inline;
+	    }
+	}
   p.intro {
     display: block;
     font-size: 22px;
@@ -302,7 +317,11 @@ main .single-news .date-share-wrapper, .date-share-wrapper
 		}
 	}
 }
-// ufl blocks
+// ufl and other blocks
+.wp-block-social-links .wp-block-social-link.wp-social-link {
+	line-height: 0 !important;
+	padding-left:0 !important;
+}
 .news-landing-header .news-hero-featured,
 .cta-button-wrapper .cta-button .cta-title,
 .visual-navigation .visual-navigation-wrapper .visual-navigation-link p {

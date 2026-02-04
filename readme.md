@@ -13,6 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Remove event booking form customizations, as booking is no longer used
 - Add share icons to post templates (for real this time) and move to top
 - Add Dashicons on front end for non logged in users
+- Override some parent theme styles for #content ul li to prevent unwanted list bullets being added to block elements
 - TODO add font-awesome icons??
 - Accessibility updates
 	- Adjust styling for share icons in stories to force LinkedIn share icon display 
