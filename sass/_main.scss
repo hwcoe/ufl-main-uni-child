@@ -355,7 +355,10 @@ main .single-news .date-share-wrapper, .date-share-wrapper
 		margin-bottom: 2rem;
 		font-family: var(--book-weight-sans), Arial, sans-serif;
 	}
-
+}
+.tab-link {
+	text-align: right;
+	margin-bottom:1em;
 }
 // make sure links within ufl blocks are underlined for accessibility
 .accordion .accordion-item .accordion-body .accordion-body-wrap a,
@@ -400,7 +403,7 @@ main .single-news .date-share-wrapper, .date-share-wrapper
 // text links in dark bg areas
 // featured video
 .featured-video {
-	.card-title a, .card-description a {
+	h2 a, p a {
 		&:link, &:visited {
 			color:#fff;
 		}

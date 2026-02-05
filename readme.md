@@ -14,6 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Add share icons to post templates (for real this time) and move to top
 - Add Dashicons on front end for non logged in users
 - Override some parent theme styles for #content ul li to prevent unwanted list bullets being added to block elements
+- Adjust spacing and alignment in .tab-link
+- Update text link color in .featured-video block
 - TODO add font-awesome icons??
 - Accessibility updates
 	- Adjust styling for share icons in stories to force LinkedIn share icon display 
