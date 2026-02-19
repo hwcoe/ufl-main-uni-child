@@ -7,7 +7,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
-1.4.6 (in progress)
+1.4.6
 - Reconcile event submission form with plugin update
 - Allow selection of tags in event submission form
 - Remove event booking form customizations, as booking is no longer used
@@ -22,10 +22,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Add text-decoration to text links in ufl blocks: accordion, cards right rail
 	- Adjust color contrast in forms text
 	- Add ReciteMe
-	- Alt text/empty alt attribute for decorative images in section nav
-	- TODO accessible "read more" links and buttons
-		- post category and archive template
-		- Carousel, Stack carousel, Hero, cards (text+image), showcase text image
+	- Alt text/empty alt attribute for decorative images in section nav 
 
 1.4.5
 - CSS updates
