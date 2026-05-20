@@ -7,6 +7,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
+1.4.7 (in progress)
+- TODO add font-awesome icons??
+- Address PHP notice ob_end_flush(): Failed to send buffer of zlib output compression
+- Accessibility updates
+	- TODO display:none for empty h2s inside .slider-section (and in general for fields that are left empty in ufl-blocks)
+	- TODO accessible "read more" links and buttons
+		- post category and archive template
+		- Carousel, Stack carousel, Hero, cards (text+image), showcase text image
+
 1.4.6
 - Reconcile event submission form with plugin update
 - Allow selection of tags in event submission form
