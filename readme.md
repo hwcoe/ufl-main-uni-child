@@ -10,7 +10,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 1.4.7 (in progress)
 - TODO add font-awesome icons??
 - Address PHP notice ob_end_flush(): Failed to send buffer of zlib output compression
-- Remove description from category/tag archive template
+- Remove description from front end category/tag archive template
+- Add in_latest_posts meta field to categories to allow hiding categories from dropdown in Latest Posts layout
 - Accessibility updates
 	- TODO display:none for empty h2s inside .slider-section (and in general for fields that are left empty in ufl-blocks)
 	- TODO accessible "read more" links and buttons
