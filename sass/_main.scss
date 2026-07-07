@@ -185,6 +185,11 @@ p {
 		line-height: 5.5rem;
 	}
 }
+.entry-content .wp-has-aspect-ratio iframe {
+	aspect-ratio: 16/9;
+	height: unset;
+	width: 100%;
+}
 .entry-content a, .fullwidth-text-block a, .single-news-body-content a {
 	font-family: var(--medium-weight-sans), Arial, sans-serif;
 	text-decoration: underline;

@@ -12,6 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Address PHP notice ob_end_flush(): Failed to send buffer of zlib output compression
 - Remove description from front end category/tag archive template
 - Add in_latest_posts meta field to categories to allow hiding categories from dropdown in Latest Posts layout
+- Define iframe width, height, and aspect ratio for iframes in .entry-content (used in most page and post templates)
 - Accessibility updates
 	- TODO display:none for empty h2s inside .slider-section (and in general for fields that are left empty in ufl-blocks)
 	- TODO accessible "read more" links and buttons
