@@ -246,7 +246,7 @@ a:hover, a:focus {
 	div.wp-block-rss__item-title {
 		display: inline;
 	}
-	ul.wp-block-list {
+	ul.wp-block-list, ul.wp-block-page-list {
 		li::before {
 			content: "■";
 			display: inline-block;
