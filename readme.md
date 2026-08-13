@@ -15,7 +15,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Add in_latest_posts meta field to categories to allow hiding categories from dropdown in Latest Posts layout
 - Define iframe width, height, and aspect ratio for iframes in .entry-content (used in most page and post templates)
 - Accessibility updates
-	- TODO display:none for empty h2s inside .slider-section (and in general for fields that are left empty in ufl-blocks)
+	- Add display:none rule for empty header and p tags
+	- Override inaccessible color contrast for post category badges
+
 	- TODO accessible "read more" links and buttons
 		- post category and archive template
 		- Carousel, Stack carousel, Hero, cards (text+image), showcase text image
