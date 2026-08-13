@@ -44,13 +44,13 @@ $postid = get_option('page_for_posts');
 							'meta_query' => [
 							  'relation' => 'OR',
 							  [
-							      'key'     => 'in_latest_posts',
-							      'value'   => '1',
-							      'compare' => '=',
+									'key'     => 'in_latest_posts',
+									'value'   => '1',
+									'compare' => '=',
 							  ],
 							  [
-							      'key'     => 'in_latest_posts',
-							      'compare' => 'NOT EXISTS',
+									'key'     => 'in_latest_posts',
+									'compare' => 'NOT EXISTS',
 							  ],
 							],
 						);
@@ -100,33 +100,44 @@ $postid = get_option('page_for_posts');
   </div>
 
   <div class="container">
-	 <div id="misha_posts_wrap" class="row position-relative news-row" data-masonry="{&quot;percentPosition&quot;: true }">
+	
+	<div id="misha_posts_wrap" class="row position-relative news-row" data-masonry="{&quot;percentPosition&quot;: true }">
 		<?php
-		$params = [
-		  "posts_per_page" => 15,
-		];
+		$category_slugs = wp_list_pluck($categories, 'slug');
+		$args = array(
+			'post_type' => 'post',
+			'posts_per_page' => 15,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'category',
+					'field'    => 'slug',
+					'terms'    => $category_slugs,
+					'operator' => 'IN',
+				),
+			),
+		);
 
-		query_posts($params);
+		$posts_query = new WP_Query( $args );
 
-		global $wp_query;
-
-		if (have_posts()) :
-		  while (have_posts()) :
-			 the_post();
-
-			 get_template_part("template-parts/content-post");
-		  endwhile;
+		if ( $posts_query->have_posts() ) :
+			while ( $posts_query->have_posts() ) : 
+				$posts_query->the_post();
+				
+				get_template_part("template-parts/content-post");
+			endwhile;
 		else :
-		  $posts_html = "<p>Nothing found for your criteria.</p>";
+			$posts_html = "<p>Nothing found for your criteria.</p>";
 		endif;
+		wp_reset_postdata();
 		?>
+
 	 </div>
   </div>
 
   <!-- Pagination -->
   <div class="d-flex flex-wrap justify-content-center button-wrapper my-4">
 	 <?php
-	 if ($wp_query->max_num_pages > 1) {
+	 if ($posts_query->max_num_pages > 1) {
 		echo '<div class="button animated-border-button button-border-orange button-text-dark" id="misha_loadmore">More posts</div>'; // you can use <a> as well
 	 }
 	 ?>

@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Remove description from front end category/tag archive template
 - Tweak z-index for .news-hero-supporting so it's behind navbar
 - Add bullets to .wp-block-page-list
-- Add in_latest_posts meta field to categories to allow hiding categories from dropdown in Latest Posts layout
+- Add in_latest_posts meta field to categories to allow hiding categories from dropdown and posts page in Latest Posts layout
 - Define iframe width, height, and aspect ratio for iframes in .entry-content (used in most page and post templates)
 - Accessibility updates
 	- Add display:none rule for empty header and p tags
