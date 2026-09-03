@@ -1,13 +1,13 @@
 <?php
 /* Template Name: News Template */
 get_header();
-// $years = get_posts_years_array_child();
 $years = get_posts_years_array();
 $postid = get_option('page_for_posts');
 ?>
 
 <div id="content" class="site-content news test-home">
   <div id="primary" class="news-landing-body content-area">
+  		<h1 class="visually-hidden">Posts from <?php bloginfo('name'); ?></h1>
 	 <?php
 	 // prevents top post's content from showing above latest posts layout when no posts page is selected in Customizer
 	 if( $postid != 0 ) {
@@ -22,11 +22,7 @@ $postid = get_option('page_for_posts');
 	<div class="container">
 		<div class="row">
 			<div class="title-wrapper">
-				<?php if ( is_front_page() ) : ?>
-				<h1 class="font-heading">NEWS & STORIES</h1>
-			<?php else: ?>
-			 <h2 class="font-heading">NEWS & STORIES</h2>
-			<?php endif; ?>
+				<h2 class="font-heading">NEWS & STORIES</h2>
 			 <hr/>
 		  </div>
 
