@@ -12,13 +12,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Address PHP notice ob_end_flush(): Failed to send buffer of zlib output compression
 - Remove description from front end category/tag archive template
 - Tweak z-index for .news-hero-supporting so it's behind navbar
-- Add bullets to .wp-block-page-list, .cn-entry-single, .em-event-single ul li
+- Add bullets to .wp-block-page-list, .cn-entry-single ul li
 - Add in_latest_posts meta field to categories to allow hiding categories from dropdown and posts page in Latest Posts layout
 - Define iframe width, height, and aspect ratio for iframes in .entry-content (used in most page and post templates)
 - Accessibility updates
 	- Add display:none rule for empty header and p tags
 	- Override inaccessible color contrast for post category badges
 	- Add visually hidden H1 to latest posts layout
+	- Styling and layout updates to Events Manager elements 
 	- TODO accessible "read more" links and buttons
 		- post category and archive template
 		- Carousel, Stack carousel, Hero, cards (text+image), showcase text image

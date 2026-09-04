@@ -41,3 +41,32 @@
 	border-color: #eee !important;
 	color: #000 !important;
 }
+
+/* EVENT LISTING */
+// .em {
+// 	--default-color: #000;
+// 	--meta-color: #000;
+// }
+// .em.em-item .em-item-image .em-item-image-placeholder, 
+// .em.em-list .em-item .em-item-image .em-item-image-placeholder, 
+// .em.em-list-widget .em-item .em-item-image .em-item-image-placeholder, 
+// .em .em-pagination .page-numbers.next, .em .em-pagination .page-numbers.next.last, 
+// .em .em-pagination .page-numbers.prev, .em .em-pagination .page-numbers.prev.first {
+// 		opacity:1;
+// }
+// .em .em-pagination {
+//   --color: #000;
+//   --color-hover: #000;
+// }
+
+
+// target .em and all child elements
+.em, .em * {
+	--color: #000;
+	--color-hover: #000;
+	--default-color: #000;
+	--meta-color: #000;
+	--accent-color: #0021A5;
+	opacity:1 !important;
+
+}

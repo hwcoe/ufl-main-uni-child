@@ -225,7 +225,8 @@ a:hover, a:focus {
 	
 		li::before {
 			content:"";
-			display:block;
+			// display:block;
+			display:inline-block;
 		}
 	}
 	ul.wp-block-latest-posts,
@@ -247,7 +248,7 @@ a:hover, a:focus {
 		display: inline;
 	}
 	ul.wp-block-list, ul.wp-block-page-list, 
-	.cn-entry-single ul, .em-event-single ul {
+	.cn-entry-single ul {
 		li::before {
 			content: "■";
 			display: inline-block;

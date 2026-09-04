@@ -21,7 +21,7 @@ event_breadcrumb($post, true);
 		</div>
 	</div>
 	<footer class="entry-footer clear-both mt-5 mb-5 container">
-		<nav aria-label="bS page navigation">
+		<nav aria-label="page navigation">
 			<ul class="pagination justify-content-center">
 				<li class="page-item">
 					<?php previous_post_link('%link'); ?>
