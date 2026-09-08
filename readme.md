@@ -15,14 +15,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Add bullets to .wp-block-page-list, .cn-entry-single ul li
 - Add in_latest_posts meta field to categories to allow hiding categories from dropdown and posts page in Latest Posts layout
 - Define iframe width, height, and aspect ratio for iframes in .entry-content (used in most page and post templates)
-- Accessibility updates
+- Accessibility updates - general
 	- Add display:none rule for empty header and p tags
 	- Override inaccessible color contrast for post category badges
 	- Add visually hidden H1 to latest posts layout
-	- Styling and layout updates to Events Manager elements 
 	- TODO accessible "read more" links and buttons
 		- post category and archive template
 		- Carousel, Stack carousel, Hero, cards (text+image), showcase text image
+- Accessibility updates - Events Manager
+	- Increase color contrast in Events Manager elements 
+	- Add labels to Previous and Next buttons and calendar month nav in events calendar layout
+	- Add proper labeling to event submission form fields
 
 1.4.6
 - Reconcile event submission form with plugin update

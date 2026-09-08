@@ -62,11 +62,38 @@
 
 // target .em and all child elements
 .em, .em * {
+	--accent-color: #0021A5;
 	--color: #000;
 	--color-hover: #000;
+	--date-color : #000;
 	--default-color: #000;
+	--header-color: #0021A5;
 	--meta-color: #000;
-	--accent-color: #0021A5;
+	--nav-color : #0021A5;
 	opacity:1 !important;
+
+}
+.em.em-calendar .em-cal-nav .month-nav .em-calnav {
+	height: 28px;
+	margin-bottom: -10px;
+  	&:focus {
+		outline:2px solid var(--nav-color);
+	}
+}
+.em.em-calendar .em-cal-nav .button {
+	&:hover, &:active, &:focus {
+		text-decoration:none;
+	}
+	&:focus {
+		outline:2px solid var(--nav-color);
+	}
+}
+#em-flatpickr {
+	.flatpickr-monthSelect-month.endRange, 
+	.flatpickr-monthSelect-month.selected, 
+	.flatpickr-monthSelect-month.startRange {
+		background-color: var(--accent-color);
+		border-color: var(--accent-color);
+	}
 
 }
