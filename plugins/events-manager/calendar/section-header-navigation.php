@@ -13,7 +13,8 @@
 	<div class="month input">
 		<?php if( !empty($args['calendar_nav']) && !empty($args['calendar_month_nav']) ): ?>
 			<form action="" method="get">
-				<input type="month" class="em-month-picker" value="<?php echo esc_attr($EM_DateTime->i18n('Y-m')) ?>" data-month-value="<?php echo esc_attr($EM_DateTime->i18n( em_get_option('dbem_full_calendar_month_format') )) ?>">
+				<label for="month-picker" class="visually-hidden">Select month</label>
+				<input id="month-picker" type="month" class="em-month-picker" value="<?php echo esc_attr($EM_DateTime->i18n('Y-m')) ?>" data-month-value="<?php echo esc_attr($EM_DateTime->i18n( em_get_option('dbem_full_calendar_month_format') )) ?>">
 				<span class="toggle"></span>
 			</form>
 		<?php else: ?>

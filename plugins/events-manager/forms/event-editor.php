@@ -53,8 +53,8 @@ $id = rand(); // not related to searches, so we'll just add an ID for good pract
 				<label for="event-name"><?php esc_html_e('Event Name', 'events-manager'); ?><?php echo $required; ?></label>		
 				<div class="input">
 					<input type="text" name="event_name" id="event-name" maxlength="110" value="<?php echo esc_attr($EM_Event->event_name,ENT_QUOTES); ?>" />
-					<label class="description" for="event-name"><?php esc_html_e('Example: Information Session (max 110 characters)', 'events-manager'); ?></label>
-					<?php em_locate_template('forms/event/group.php',true); ?>
+					<label class="description" for="event-name"><?php esc_html_e('Example: Information Session (max 110 characters)', 'events-manager'); ?></label>				
+					<?php // HWCOE edit: remove group fields ?>
 				</div>
 			</section>
 
@@ -95,8 +95,8 @@ $id = rand(); // not related to searches, so we'll just add an ID for good pract
 					<?php if(em_get_option('dbem_categories_enabled')) { em_locate_template('forms/event/categories-public.php',true); }  ?>
 					<?php if(em_get_option('dbem_tags_enabled')):  ?>
 						<div class="event-tags">
-							<label for="event_tags[]"><?php _e ( 'Tag:', 'events-manager'); ?></label>
- 							<select name="event_tags[]" class="em-selectize selectized" multiple="multiple" size="10" tabindex="-1">
+							<label for="event-tags"><?php _e ( 'Tag:', 'events-manager'); ?></label>
+ 							<select name="event_tags[]" id="event-tags" class="em-selectize" multiple="multiple" size="10">
 							<?php
 								$tags = get_terms(array(
 						    		'taxonomy' => 'event-tags',
@@ -109,7 +109,7 @@ $id = rand(); // not related to searches, so we'll just add an ID for good pract
 								} 
 							?>
 							</select>
-							<label class="description" for="event_tags[]"><?php _e ( 'Select tags if you want your event to show up on an event listing for a specific department.', 'events-manager'); ?></label>						
+							<label class="description" for="event_tags"><?php _e ( 'Select tags if you want your event to show up on an event listing for a specific department.', 'events-manager'); ?></label>						
 						</div>
 					<?php endif; ?>
 					
@@ -117,17 +117,8 @@ $id = rand(); // not related to searches, so we'll just add an ID for good pract
 				</div>
 			</section>
 
-			<?php if( em_get_option('dbem_rsvp_enabled') && $EM_Event->can_manage('manage_bookings','manage_others_bookings') ) : ?>
-			<section class="event-form-bookings <?php echo $template; ?>">
-				<!-- START Bookings -->
-				<h2><?php esc_html_e('Bookings/Registration','events-manager'); ?></h2>
-				<div class="input event-form-bookings">
-					<?php em_locate_template('forms/event/bookings.php',true); ?>
-				</div>
-				<!-- END Bookings -->
-			</section>
-			<?php endif; ?>
-			
+
+			<?php // HWCOE edit: remove bookings fields ?>
 			
 			<?php do_action('em_front_event_form_footer', $EM_Event); ?>
 
