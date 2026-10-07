@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ## Changelog
 
 1.4.7 (in progress)
-- TODO add font-awesome icons??
+- Convert to native CSS from Sass
 - Address PHP notice ob_end_flush(): Failed to send buffer of zlib output compression
 - Remove description from front end category/tag archive template
 - Tweak z-index for .news-hero-supporting so it's behind navbar
@@ -19,6 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Add display:none rule for empty header and p tags
 	- Override inaccessible color contrast for post category badges
 	- Add visually hidden H1 to latest posts layout
+	- Update link button styles
 	- TODO accessible "read more" links and buttons
 		- post category and archive template
 		- Carousel, Stack carousel, Hero, cards (text+image), showcase text image
