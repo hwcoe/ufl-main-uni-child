@@ -7,12 +7,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
 
-1.4.7 (in progress)
+1.4.7
 - Convert to native CSS from Sass
 - Address PHP notice ob_end_flush(): Failed to send buffer of zlib output compression
 - Remove description from front end category/tag archive template
 - Tweak z-index for .news-hero-supporting so it's behind navbar
 - Add bullets to .wp-block-page-list, .cn-entry-single ul li
+- Remove underline text-decoration from buttons in content areas 
 - Add in_latest_posts meta field to categories to allow hiding categories from dropdown and posts page in Latest Posts layout
 - Define iframe width, height, and aspect ratio for iframes in .entry-content (used in most page and post templates)
 - Accessibility updates - general

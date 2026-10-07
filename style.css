@@ -4,7 +4,7 @@ Theme URI: 		https://ufl.edu/
 Author: 		UFL 
 Author URI: 	https://ufl.edu/
 Template:     	ufl-main-uni
-Version:      	1.4.6
+Version:      	1.4.7
 License URI: 	https://ufl.edu
 Text Domain: 	ufl_stamatschild
 */
@@ -25,7 +25,6 @@ UF Branding Fonts
 .script, .display {
   font-family: var(--display-script), sans-serif;
 }
-
 
 /* variables */
 :root{
@@ -99,9 +98,6 @@ body {
 .section-navigation .section-navigation-inner {
 	z-index: 99998;
 }
-
-/* footer */
-
 .footer-wrapper .footer .footer-section .widget-title {
 	font-size: 1.75rem;
 	line-height: 2rem;
@@ -139,6 +135,7 @@ footer {
 	margin:0;
 	color: #fff;
 }
+
 /* ---------------------------
 Forms
 ----------------------------*/
@@ -165,7 +162,6 @@ Forms
 	 }
 
 }
-
 #main .gform_wrapper .gfield_required, 
 #main-content.form-ufl .gfield_required {
 	color: var(--core-blue);
@@ -256,18 +252,15 @@ p {
 	height: unset;
 	width: 100%;
 }
-.entry-content a, .fullwidth-text-block a, .single-news-body-content a {
+.entry-meta a, .entry-content a, .fullwidth-text-block a, .single-news-body-content a {
 	font-family: var(--medium-weight-sans), Arial, sans-serif;
 	text-decoration: underline;
-}
-.entry-content a, .fullwidth-text-block a {
-	.wp-block-button a, a.button {
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
+	&:hover, &:focus, &:active, 
+	&.wp-element-button, &.animated-underline-button, &.animated-border-button {
+		text-decoration: none;
 	}
 }
+
 a, .page-link {
 	color:var(--core-blue);
 }
@@ -282,8 +275,7 @@ a:hover, a:focus {
 
 #content {
 	ul {
-		list-style:none;
-	
+		list-style:none;	
 		li::before {
 			content:"";
 		}
@@ -378,6 +370,7 @@ main .single-news .date-share-wrapper, .date-share-wrapper
 		}
 	}
 }
+
 /* ufl and other blocks*/
 .wp-block-social-links .wp-block-social-link.wp-social-link {
 	padding-left:0 !important;
@@ -430,23 +423,16 @@ main .single-news .date-share-wrapper, .date-share-wrapper
 .accordion .accordion-item .accordion-body .accordion-body-wrap a,
 .card-right-rail-section .container a {
 	text-decoration:underline;
-
-	&:hover, &:focus {
+	&:hover, &:focus, &:active {
 		text-decoration:none;
 	}
 }
 
-/* buttons*/
-.wp-block-button a, a.button {
-	text-decoration: none;
-	&:hover, &:focus {
-		text-decoration: none;
-	}
-}
 .is-style-animated-underline .wp-block-button__link {
 	border-left-width: 0;
 	border-right-width: 0;
 }
+
 .btn-outline-primary {
 	--bs-btn-color: var(--core-blue);
 	--bs-btn-border-color: var(--core-blue);
@@ -469,19 +455,6 @@ main .single-news .date-share-wrapper, .date-share-wrapper
 	padding: 12px 7%;
 	font-size: 16px;
 	line-height: 28px;
-}
-
-/* text links in dark bg areas
-// featured video*/
-.featured-video {
-	h2 a, p a {
-		&:link, &:visited {
-			color:#fff;
-		}
-		&:hover, &:active, &:focus {
-			text-decoration:none;
-		}
-	}
 }
 
 /*things that don't work, so we're hiding them*/
